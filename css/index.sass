@@ -1,0 +1,177 @@
+$MainColor: rgb(7, 0, 17)
+$SecondaryColor: #7100ce
+$ThirdColor: #04d1f5
+*
+    box-sizing: border-box
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    background-color: rgba(0, 0, 0, 0)
+    color: #fff
+body
+    margin: 0
+    background-color: $MainColor
+nav
+    background-color: $MainColor
+    display: grid
+    grid-template-columns: 0.2fr 0.8fr
+    grid-template-rows: 100%
+    padding: 0 30px 0 30px
+    height: 55px
+    p    
+        display: grid
+        justify-items: center
+        align-content: center
+        border: 0px
+        font-size: 20px
+        margin: 0 14px
+.buttons
+    display: flex
+    justify-content: right     
+#Navbutton
+    border: none
+    text-decoration: none
+    width: 80px
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    transition: 0.4s
+    font-weight: 600
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 2px
+        left: 0
+        top: 0
+        background: $SecondaryColor
+        transform: scaleX(0)
+        transition: 0.4s
+    &:hover::after
+        transform: scaleX(1)
+    &:hover
+        color: $SecondaryColor  
+      
+.sticky
+    position: fixed
+    top: 0
+    width: 100%
+.gif-container
+    background-image: url('../img/gif.gif')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: bottom
+    height: 94.5vh
+    display: flex
+    justify-content: center
+    align-items: center
+.gif-contact
+    color: #ffffff
+    width: 400px
+    text-align: center
+    font-size: x-large
+    button
+        font-size: x-large
+        font-weight: 600
+        color: #ffffff
+        background-color: #cf0000
+        border: none
+        width: 200px
+        height: 45px
+        border-radius: 10px
+        transition: 0.3s
+        &:hover
+            cursor: pointer
+            background-color: $SecondaryColor
+
+//MAIN
+
+h1
+    margin: 0
+.our-offer
+    padding: 50px 230px 50px 230px
+    display: grid
+    text-align: center
+    align-content: center
+    h1
+        font-size: 38px
+    p
+        padding: 5px
+        border-left: 2px solid $ThirdColor
+        border-right: 2px solid $ThirdColor
+        font-size: 28px
+    
+.what-matters
+    background-color: $SecondaryColor
+    padding: 4vw 15vw 4vw 15vw
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr
+    justify-items: center
+    align-content: center
+    h1
+        font-size: 40px
+        span
+            color: $ThirdColor
+    ul
+        padding-right: 30px
+
+    li
+        font-size: 28px
+        margin: 15px 0 10px 0
+        border-bottom: 2px solid $ThirdColor
+.wm1
+
+.what-matters-img
+    background-image: url('../img/placeholderIMG1.jpg')
+    background-size: cover
+    background-position: bottom
+    border-radius: 10px
+    width: 100%
+    height: auto
+
+//contact us article
+.contact-us
+    padding: 4vw 15vw 4vw 15vw
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr
+    justify-items: center
+    align-content: center
+.contact-info
+    h1
+        font-size: 1.8em
+        
+    p
+        padding: 0 10px 0 10px
+        font-size: 1.2em
+    h2
+        font-size: 2em
+        color: $ThirdColor
+        font-style: italic
+.contact-forum
+    background-color: #7100ce11
+    border-radius: 15px
+    padding: 30px 10px 10px 10px
+    height: 350px
+    position: relative
+.inputForms
+    border: 1px solid #fff
+    border-radius: 5px
+    font-size: 1.3em
+    width: 270px
+    height: 50px
+    margin: 5px 10px 5px 10px
+.submit
+    width: 100px
+    height: 30px
+    background-color: $SecondaryColor
+    border: none
+    border-radius: 15px
+    position: absolute
+    bottom: 10%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+
+
