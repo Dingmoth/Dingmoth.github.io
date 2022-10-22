@@ -180,7 +180,7 @@ h1 {
   background-color: rgba(113, 0, 206, 0.0666666667);
   border-radius: 15px;
   padding: 30px 10px 10px 10px;
-  height: 350px;
+  height: 450px;
   position: relative;
 }
 
@@ -193,14 +193,29 @@ h1 {
   margin: 5px 10px 5px 10px;
 }
 
-.submit {
+.inputs {
+  text-align: left;
+  padding: 0 20px 0 20px;
+}
+.inputs label {
+  font-size: 1.1em;
+}
+.inputs label a {
+  color: #04d1f5;
+}
+
+form {
+  text-align: center;
+}
+
+input[type=submit] {
   width: 100px;
   height: 30px;
   background-color: #7100ce;
   border: none;
   border-radius: 15px;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }/*# sourceMappingURL=index.css.map */
