@@ -1,21 +1,23 @@
-$MainColor: rgb(7, 0, 17)
-$SecondaryColor: #7100ce
-$ThirdColor: #04d1f5
+$MainColor: #2e253a
+$SecondaryColor: #d7bd68
+$ThirdColor: #ffffff
 *
     box-sizing: border-box
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     background-color: rgba(0, 0, 0, 0)
-    color: #fff
+    color: $ThirdColor
 body
     margin: 0
     background-color: $MainColor
 nav
+    position: fixed
+    width: 100%
     background-color: $MainColor
     display: grid
     grid-template-columns: 0.2fr 0.8fr
     grid-template-rows: 100%
     padding: 0 30px 0 30px
-    height: 55px
+    height: 60px
     p    
         display: grid
         justify-items: center
@@ -23,6 +25,12 @@ nav
         border: 0px
         font-size: 20px
         margin: 0 14px
+.logo
+    height: 50px
+    margin: auto 0
+.fa-solid
+    margin: auto 5px
+    display: none
 .buttons
     display: flex
     justify-content: right     
@@ -56,33 +64,46 @@ nav
     position: fixed
     top: 0
     width: 100%
-.gif-container
-    background-image: url('../img/gif.gif')
+#gif-Container
     background-repeat: no-repeat
     background-size: cover
-    background-position: bottom
-    height: 94.5vh
+    background-position: center
+    height: 100vh
     display: flex
     justify-content: center
     align-items: center
+    animation: bgGif 12s ease-in-out infinite
+@keyframes bgGif
+    0%
+        background-image: url('../img/gif.gif')
+    48%
+       background-image: url('../img/gif1.gif')
+    81%
+        background-image: url('../img/gif2.gif')
+    100%
+        background-image: url('../img/gif.gif')
 .gif-contact
-    color: #ffffff
+    color: $ThirdColor
     width: 400px
     text-align: center
     font-size: x-large
+    p
+        font-size: 24px
+        margin: 0 0 10px 0
     button
         font-size: x-large
         font-weight: 600
-        color: #ffffff
-        background-color: #cf0000
+        color: $ThirdColor
+        background-color: $MainColor
         border: none
         width: 200px
         height: 45px
         border-radius: 10px
-        transition: 0.3s
+        transition: 0.5s
         &:hover
             cursor: pointer
             background-color: $SecondaryColor
+            color: $MainColor
 
 //MAIN
 
@@ -110,6 +131,7 @@ h1
     justify-items: center
     align-content: center
     h1
+        color: $MainColor
         font-size: 40px
         span
             color: $ThirdColor
@@ -117,9 +139,15 @@ h1
         padding-right: 30px
 
     li
-        font-size: 28px
+        font-size: 20px
         margin: 15px 0 10px 0
-        border-bottom: 2px solid $ThirdColor
+        border-bottom: 2px solid $MainColor
+        color: $MainColor
+        list-style-image: url(../img/icons/arrow.png)
+        span
+            color: $MainColor
+            font-weight: 700
+            
 .wm1
 
 .what-matters-img
@@ -129,6 +157,117 @@ h1
     border-radius: 10px
     width: 100%
     height: auto
+//services
+.marketing-services-grid
+    display: grid
+    grid-template-columns: repeat(3, 18vw)
+    grid-template-rows: 25vh 25vh
+    justify-content: center
+    gap: 30px
+    padding: 40px
+    a
+        text-decoration: none
+        transition: 0.2s
+        &:hover
+            transform: translateY(-10%)
+.serviceOptions
+    display: grid
+    align-content: center
+    margin: 0 10px 0 10px
+    border-radius: 10px
+    border-left: solid 2px $SecondaryColor
+    border-right: solid 2px $SecondaryColor
+    padding: 0 10px 0 10px
+    div
+        display: flex
+        position: relative
+        img
+            position: absolute
+            left: 80%
+            top: 50%
+            transform: translateY(-50%)
+            //margin: auto 0
+            width: 48px
+            height: 48px
+//Blogs
+
+// .container
+//     display: flex
+//     justify-content: right
+//     align-items: center
+//     padding: 0 5vw
+
+// .our-blogs
+//     width: 800px
+//     height: 500px
+//     border-radius: 10px
+//     overflow: hidden
+
+// .blog_slides
+//     display: flex
+//     width: 300%
+//     height: 500px
+//     input
+//         display: none
+// .slide
+//     width: 33.3%
+//     transition: 2s
+//     img
+//         width: 800px
+//         height: 500px
+
+// .navigation_manual
+//     position: absolute
+//     width: 800px
+//     margin-top: -40px
+//     display: flex
+//     justify-content: right
+
+// .manual_btn
+//     border: solid 2px $SecondaryColor
+//     padding: 5px
+//     border-radius: 10px
+//     cursor: pointer
+//     transition: 1s
+//     &:not(:last-child)
+//         margin-right: 40px
+//     &:hover
+//         background-color: $SecondaryColor
+
+// #slide1
+//     &:checked ~ .first
+//         margin-left: 0%
+// #slide2
+//     &:checked ~ .first
+//         margin-left: -33.3%
+// #slide3
+//     &:checked ~ .first
+//         margin-left: -66.6%       
+
+// .navigation_auto
+//     position: absolute
+//     width: 800px
+//     margin-top: -40px
+//     display: flex
+//     justify-content: right
+//     div
+//         border: solid 2px $SecondaryColor
+//         padding: 5px
+//         border-radius: 10px
+//         cursor: pointer
+//         transition: 1s
+//         &:not(:last-child)
+//             margin-right: 40px
+
+// #slide1
+//     &:checked ~ .navigation_auto .auto_btn1
+//         background-color: $SecondaryColor
+// #slide2
+//     &:checked ~ .navigation_auto .auto_btn2
+//         background-color: $SecondaryColor
+// #slide3
+//     &:checked ~ .navigation_auto .auto_btn3
+//         background-color: $SecondaryColor        
 
 //contact us article
 .contact-us
@@ -156,7 +295,7 @@ h1
     height: 450px
     position: relative
 .inputForms
-    border: 1px solid #fff
+    border: 1px solid $ThirdColor
     border-radius: 5px
     font-size: 1.3em
     width: 270px
@@ -168,7 +307,7 @@ h1
     label
         font-size: 1.1em
         a
-            color: $ThirdColor
+            color: $SecondaryColor
 form
     text-align: center
 input[type=submit]
@@ -181,6 +320,7 @@ input[type=submit]
     bottom: 5%
     left: 50%
     transform: translate(-50%, -50%)
+    color: $MainColor
 
 
 
