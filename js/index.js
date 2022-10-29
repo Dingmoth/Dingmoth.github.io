@@ -1,13 +1,16 @@
 'use strict'
 
-function validate(){
-    let valid = false;
-    if(ocument.getElementById("service").checked){
-        valid = true;
-    }
-    else{
-        alert("You must slecet at least one sservice.");
-        return false;
-    }
-        
+if (document.querySelectorAll("input [type=checkbox]:checked.length==0")){
+    alert("EROR MESSAGE: SELECT ONE AT LEAST...");
 }
+
+
+
+// function validate(){
+//     if(document.getElementsByClassName("service").checked){       
+//     }  
+//     else{
+//         alert("You must select a service");
+//         return false;
+//     }   
+// }
