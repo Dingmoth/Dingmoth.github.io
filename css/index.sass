@@ -1,0 +1,409 @@
+$MainColor: #2e253a
+$SecondaryColor: #d7bd68
+$ThirdColor: #ffffff
+$emphasis: #f30000
+*
+    box-sizing: border-box
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    background-color: rgba(0, 0, 0, 0)
+    color: $ThirdColor
+body
+    margin: 0
+    background-color: $MainColor
+nav
+    position: fixed
+    width: 100vw
+    background-color: $MainColor
+    display: grid
+    grid-template-columns: 0.2fr 0.8fr
+    grid-template-rows: 100%
+    height: 60px
+    z-index: 999
+    img
+        margin-left: 20px
+    p    
+        display: grid
+        justify-items: center
+        align-content: center
+        border: 0px
+        font-size: 20px
+        margin: 0 14px
+.logo
+    height: 50px
+    margin: auto 0
+.fa-solid
+    margin: auto 5px
+    display: none
+.buttons
+    display: flex
+    justify-content: right  
+    margin-right: 20px   
+#Navbutton
+    border: none
+    text-decoration: none
+    width: 80px
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    transition: 0.4s
+    font-weight: 600
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 2px
+        left: 0
+        top: 0
+        background: $SecondaryColor
+        transform: scaleX(0)
+        transition: 0.4s
+    &:hover::after
+        transform: scaleX(1)
+    &:hover
+        color: $SecondaryColor  
+      
+.sticky
+    position: fixed
+    top: 0
+    width: 100%
+#gif-Container
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    animation: bgGif 12s ease-in-out infinite
+@keyframes bgGif
+    0%
+        background-image: url('../img/gif.gif')
+    48%
+       background-image: url('../img/gif1.gif')
+    81%
+        background-image: url('../img/gif2.gif')
+    100%
+        background-image: url('../img/gif.gif')
+.gif-contact
+    color: $ThirdColor
+    width: 400px
+    text-align: center
+    font-size: x-large
+    p
+        font-size: 24px
+        margin: 0 0 10px 0
+    button
+        font-size: x-large
+        font-weight: 600
+        color: $ThirdColor
+        background-color: $MainColor
+        border: none
+        width: 200px
+        height: 45px
+        border-radius: 10px
+        transition: 0.5s
+        &:hover
+            cursor: pointer
+            background-color: $SecondaryColor
+            color: $MainColor
+
+//MAIN
+
+h1
+    margin: 0
+.our-offer
+    padding: 50px 230px 50px 230px
+    display: grid
+    text-align: center
+    align-content: center
+    h1
+        font-size: 38px
+    p
+        padding: 5px
+        border-left: 2px solid $ThirdColor
+        border-right: 2px solid $ThirdColor
+        font-size: 28px
+    
+.what-matters
+    background-color: $SecondaryColor
+    padding: 4vw 0
+    h1
+        color: $MainColor
+        font-size: 40px
+        span
+            color: $ThirdColor
+    ul
+        padding-right: 30px
+
+    li
+        font-size: 20px
+        margin: 15px 0 10px 0
+        border-bottom: 2px solid $MainColor
+        color: $MainColor
+        list-style-image: url(https)
+        span
+            color: $MainColor
+            font-weight: 700
+    div
+        display: flex
+        justify-content: center
+        margin: 0 50px
+        width: 90%
+            
+.wm1
+    width: 600px
+
+.what-matters-img
+    background-image: url("https://unsplash.it/600/600")
+    background-size: cover
+    background-position: bottom
+    border-radius: 10px
+    width: 600px
+    height: 600px
+//services
+.marketing-services-grid
+    display: grid
+    grid-template-columns: repeat(3, 18vw)
+    grid-template-rows: 25vh 25vh
+    justify-content: center
+    gap: 30px
+    padding: 80px 0
+    a
+        text-decoration: none
+        transition: 0.2s
+        &:hover
+            transform: translateY(-10%)
+.serviceOptions
+    display: grid
+    align-content: center
+    margin: 0 10px 0 10px
+    border-radius: 10px
+    border-left: solid 2px $SecondaryColor
+    border-right: solid 2px $SecondaryColor
+    padding: 0 10px
+    div
+        display: flex
+        align-items: center
+        position: relative
+        img
+            position: absolute
+            left: 80%
+            top: 50%
+            transform: translateY(-50%)
+            //margin: auto 0
+            width: 48px
+            height: 48px
+
+                
+//our work
+
+.our-work
+    text-align: center
+    margin: 120px 0
+    font-size: 1.5em
+    background-color: $SecondaryColor
+    padding: 20px 0 80px 0
+    p
+        padding: 0 20vw
+    section
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        gap: 15px
+        margin: 0 20px
+.work
+    width: 420px
+    height: 350px
+    overflow: hidden
+    border-radius: 5px
+    border: solid 2px $ThirdColor
+    img
+        filter: grayscale(70%)
+        transition: 1s ease
+        &:hover
+            filter: grayscale(0%)
+            transform: scale(1.1)
+
+//Client Opinions
+
+.client-opinions
+    width: 100%
+    height: 60vh
+    background-image: url("https://unsplash.it/2200/650")
+    margin: 100px 0
+    padding: 100px 0
+    display: flex
+    justify-content: center
+    align-items: center
+.values
+    margin: 0 1vw
+    width: 30vw
+    height: 45vh
+    border-radius: 15px
+    background-color: rgba($SecondaryColor, 0.75)
+    text-align: center
+    h1
+        font-size: 2.5em
+    p
+        font-size: 1.4em
+        padding: 40px
+    span
+        color: $emphasis
+.review
+    margin: 4vh 1vw
+    max-width: 60vw
+    min-width: 50vw
+    height: 55vh
+    border-radius: 15px
+    background-color: $ThirdColor
+    text-align: center
+    padding: 40px 10px 
+    p
+        color: $MainColor
+//Blogs
+
+.our-blogs
+    background-color: $SecondaryColor
+    text-align: center
+    padding: 80px 0
+    h1
+        margin: 20px
+        font-size: 3em
+    section
+        gap: 40px
+        display: flex
+        justify-content: center
+        h1
+            font-size: 2em
+    .blog
+        width: 400px
+        height: 300px
+        overflow: hidden
+        img
+            transition: 1s ease
+            &:hover
+                transform: scale(1.1)
+
+
+//contact us article
+.contact-us
+    padding: 4vw 15vw 4vw 15vw
+    display: flex
+    width: 100%
+    justify-content: center
+    align-content: center
+.contact-info
+    width: 50%
+    h1
+        font-size: 1.8em
+    p
+        padding: 0 10px 0 10px
+        font-size: 1.2em
+    h2
+        font-size: 2em
+        color: $ThirdColor
+        font-style: italic
+.contact-forum
+    background-color: #7100ce11
+    border-radius: 15px
+    padding: 30px 10px 10px 10px
+    width: 50%
+    min-width: 550px
+    height: 450px
+    position: relative
+.fill-in
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+.inputForms
+    border: 1px solid $ThirdColor
+    border-radius: 5px
+    font-size: 1.3em
+    width: 45%
+    height: 50px
+    margin: 5px 10px 5px 10px
+.inputs
+    text-align: left
+    padding: 0 20px 0 20px
+    label
+        font-size: 1.1em
+        a
+            color: $SecondaryColor
+form
+    text-align: center
+input[type=submit]
+    width: 100px
+    height: 30px
+    background-color: $SecondaryColor
+    border: none
+    border-radius: 15px
+    position: absolute
+    bottom: 5%
+    left: 50%
+    transform: translate(-50%, -50%)
+    color: $MainColor
+
+
+@media screen and (max-width: 1500px)
+    //main
+    .our-offer
+        padding: 50px 15px
+    .what-matters
+        div
+            display: grid
+
+    //services
+    .marketing-services-grid
+        grid-template-columns: repeat(2, 40vw)
+        grid-template-rows: repeat(3, 350px)
+    .serviceOptions
+        margin: 10px
+        div
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr 1fr
+            justify-items: center
+            text-align: center
+            img
+                position: relative
+                left: 0
+    //our-work
+    .our-blogs
+        section
+            flex-direction: column
+            div
+                display: grid
+                justify-items: center
+    //client-opinions
+    //contact-us
+    .contact-us
+        padding: 4vw 8vw 4vw 8vw
+        flex-direction: column
+    .contact-info
+        width: 100%
+        //margin: 0 auto
+    .contact-forum
+        width: 100%   
+        //margin: 0 auto
+
+
+@media screen and (max-width: 1100px)
+    .marketing-services-grid
+        grid-template-columns: 60%
+        grid-template-rows: repeat(6, 350px)
+    .client-opinions
+        height: 100vh
+        flex-direction: column
+    .values
+        width: 90%
+    .review
+        max-width: none
+        width: 90%
+    .our-work
+        p
+            padding: 0
+
+
+@media screen and (max-width: 800px)
