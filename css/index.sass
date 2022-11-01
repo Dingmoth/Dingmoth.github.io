@@ -12,14 +12,15 @@ body
     background-color: $MainColor
 nav
     position: fixed
-    width: 100%
+    width: 100vw
     background-color: $MainColor
     display: grid
     grid-template-columns: 0.2fr 0.8fr
     grid-template-rows: 100%
-    padding: 0 30px 0 30px
     height: 60px
     z-index: 999
+    img
+        margin-left: 20px
     p    
         display: grid
         justify-items: center
@@ -35,7 +36,8 @@ nav
     display: none
 .buttons
     display: flex
-    justify-content: right     
+    justify-content: right  
+    margin-right: 20px   
 #Navbutton
     border: none
     text-decoration: none
@@ -127,8 +129,6 @@ h1
 .what-matters
     background-color: $SecondaryColor
     padding: 4vw 0
-    display: grid
-    justify-items: center
     h1
         color: $MainColor
         font-size: 40px
@@ -148,9 +148,9 @@ h1
             font-weight: 700
     div
         display: flex
-        justify-items: center
+        justify-content: center
         margin: 0 50px
-        width: 1300px
+        width: 90%
             
 .wm1
     width: 600px
@@ -161,7 +161,7 @@ h1
     background-position: bottom
     border-radius: 10px
     width: 600px
-    height: auto
+    height: 600px
 //services
 .marketing-services-grid
     display: grid
@@ -169,7 +169,7 @@ h1
     grid-template-rows: 25vh 25vh
     justify-content: center
     gap: 30px
-    padding: 80px
+    padding: 80px 0
     a
         text-decoration: none
         transition: 0.2s
@@ -182,9 +182,10 @@ h1
     border-radius: 10px
     border-left: solid 2px $SecondaryColor
     border-right: solid 2px $SecondaryColor
-    padding: 0 10px 0 10px
+    padding: 0 10px
     div
         display: flex
+        align-items: center
         position: relative
         img
             position: absolute
@@ -194,6 +195,8 @@ h1
             //margin: auto 0
             width: 48px
             height: 48px
+
+                
 //our work
 
 .our-work
@@ -206,6 +209,7 @@ h1
         padding: 0 20vw
     section
         display: flex
+        flex-wrap: wrap
         justify-content: center
         gap: 15px
         margin: 0 20px
@@ -226,16 +230,17 @@ h1
 
 .client-opinions
     width: 100%
-    height: 650px
+    height: 60vh
     background-image: url("https://unsplash.it/2200/650")
     margin: 100px 0
+    padding: 100px 0
     display: flex
     justify-content: center
     align-items: center
 .values
-    margin: 0 60px
-    width: 500px
-    height: 500px
+    margin: 0 1vw
+    width: 30vw
+    height: 45vh
     border-radius: 15px
     background-color: rgba($SecondaryColor, 0.75)
     text-align: center
@@ -247,10 +252,10 @@ h1
     span
         color: $emphasis
 .review
-    margin: 0 60px
-    max-width: 800px
-    min-width: 700px
-    height: 550px
+    margin: 4vh 1vw
+    max-width: 60vw
+    min-width: 50vw
+    height: 55vh
     border-radius: 15px
     background-color: $ThirdColor
     text-align: center
@@ -281,86 +286,6 @@ h1
             &:hover
                 transform: scale(1.1)
 
-
-
-
-// .container
-//     display: flex
-//     justify-content: right
-//     align-items: center
-//     padding: 0 5vw
-
-// .our-blogs
-//     width: 800px
-//     height: 500px
-//     border-radius: 10px
-//     overflow: hidden
-
-// .blog_slides
-//     display: flex
-//     width: 300%
-//     height: 500px
-//     input
-//         display: none
-// .slide
-//     width: 33.3%
-//     transition: 2s
-//     img
-//         width: 800px
-//         height: 500px
-
-// .navigation_manual
-//     position: absolute
-//     width: 800px
-//     margin-top: -40px
-//     display: flex
-//     justify-content: right
-
-// .manual_btn
-//     border: solid 2px $SecondaryColor
-//     padding: 5px
-//     border-radius: 10px
-//     cursor: pointer
-//     transition: 1s
-//     &:not(:last-child)
-//         margin-right: 40px
-//     &:hover
-//         background-color: $SecondaryColor
-
-// #slide1
-//     &:checked ~ .first
-//         margin-left: 0%
-// #slide2
-//     &:checked ~ .first
-//         margin-left: -33.3%
-// #slide3
-//     &:checked ~ .first
-//         margin-left: -66.6%       
-
-// .navigation_auto
-//     position: absolute
-//     width: 800px
-//     margin-top: -40px
-//     display: flex
-//     justify-content: right
-//     div
-//         border: solid 2px $SecondaryColor
-//         padding: 5px
-//         border-radius: 10px
-//         cursor: pointer
-//         transition: 1s
-//         &:not(:last-child)
-//             margin-right: 40px
-
-// #slide1
-//     &:checked ~ .navigation_auto .auto_btn1
-//         background-color: $SecondaryColor
-// #slide2
-//     &:checked ~ .navigation_auto .auto_btn2
-//         background-color: $SecondaryColor
-// #slide3
-//     &:checked ~ .navigation_auto .auto_btn3
-//         background-color: $SecondaryColor        
 
 //contact us article
 .contact-us
@@ -421,4 +346,64 @@ input[type=submit]
     color: $MainColor
 
 
+@media screen and (max-width: 1500px)
+    //main
+    .our-offer
+        padding: 50px 15px
+    .what-matters
+        div
+            display: grid
 
+    //services
+    .marketing-services-grid
+        grid-template-columns: repeat(2, 40vw)
+        grid-template-rows: repeat(3, 350px)
+    .serviceOptions
+        margin: 10px
+        div
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr 1fr
+            justify-items: center
+            text-align: center
+            img
+                position: relative
+                left: 0
+    //our-work
+    .our-blogs
+        section
+            flex-direction: column
+            div
+                display: grid
+                justify-items: center
+    //client-opinions
+    //contact-us
+    .contact-us
+        padding: 4vw 8vw 4vw 8vw
+        flex-direction: column
+    .contact-info
+        width: 100%
+        //margin: 0 auto
+    .contact-forum
+        width: 100%   
+        //margin: 0 auto
+
+
+@media screen and (max-width: 1100px)
+    .marketing-services-grid
+        grid-template-columns: 60%
+        grid-template-rows: repeat(6, 350px)
+    .client-opinions
+        height: 100vh
+        flex-direction: column
+    .values
+        width: 90%
+    .review
+        max-width: none
+        width: 90%
+    .our-work
+        p
+            padding: 0
+
+
+@media screen and (max-width: 800px)
