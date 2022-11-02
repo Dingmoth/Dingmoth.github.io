@@ -18,22 +18,25 @@ nav
     grid-template-columns: 0.2fr 0.8fr
     grid-template-rows: 100%
     height: 60px
-    z-index: 999
+    z-index: 9
     img
         margin-left: 20px
     p    
         display: grid
         justify-items: center
-        align-content: center
+        align-items: center
         border: 0px
         font-size: 20px
         margin: 0 14px
+#dropdown
+    display: none
+
 .logo
     height: 50px
-    margin: auto 0
+    margin: auto 30px
 .fa-solid
     margin: auto 5px
-    display: none
+
 .buttons
     display: flex
     justify-content: right  
@@ -142,7 +145,7 @@ h1
         margin: 15px 0 10px 0
         border-bottom: 2px solid $MainColor
         color: $MainColor
-        list-style-image: url(https)
+        list-style-image: url("../img/icons/arrow.png")
         span
             color: $MainColor
             font-weight: 700
@@ -159,9 +162,10 @@ h1
     background-image: url("https://unsplash.it/600/600")
     background-size: cover
     background-position: bottom
-    border-radius: 10px
-    width: 600px
     height: 600px
+    width: 600px
+    border-radius: 10px
+
 //services
 .marketing-services-grid
     display: grid
@@ -278,8 +282,8 @@ h1
         h1
             font-size: 2em
     .blog
-        width: 400px
-        height: 300px
+        width: 100%
+        border-radius: 5px
         overflow: hidden
         img
             transition: 1s ease
@@ -305,13 +309,12 @@ h1
         font-size: 2em
         color: $ThirdColor
         font-style: italic
-.contact-forum
+.contact-form
     background-color: #7100ce11
     border-radius: 15px
     padding: 30px 10px 10px 10px
     width: 50%
-    min-width: 550px
-    height: 450px
+    height: auto
     position: relative
 .fill-in
     display: flex
@@ -405,5 +408,92 @@ input[type=submit]
         p
             padding: 0
 
-
 @media screen and (max-width: 800px)
+    nav
+        height: 10vh
+        display: flex
+        justify-content: space-between
+        position: relative
+        transform-style: preserve-3d
+    .buttons
+        display: none
+    .what-matters
+        display: flex
+        justify-content: center
+        ul
+            padding-right: 0
+            li
+                font-size: 15px
+                margin: 5px 0
+        div
+            margin: 0
+    .wm1
+        width: 90vw
+    .what-matters-img
+        width: 90vw
+        height: 90vw
+    #dropdown
+        margin: auto 15px
+        display: flex
+    .dropButtons
+        display: none
+        position: absolute
+        width: 100%
+        background-color: $MainColor
+        top: 95%
+        right: -100%
+        transform: translateX(-100%)
+        overflow: auto
+        animation: animateFromBottom .3s
+        a
+            padding: 40px 0
+            font-size: 20px
+    .show
+        display: block
+    .fa-bars
+        font-size: 2em
+    //services
+    .marketing-services-grid    
+        grid-template-columns: 90%
+    
+    //offer
+    .our-offer
+        h1
+            font-size: 28px
+        p
+            font-size: 18px
+    //our work
+    .our-work
+        p
+            padding: 0 5px
+            text-align: left
+
+    //clients
+    .client-opinions
+        padding: 0
+    .values 
+        width: 90vw
+        height: 40%
+        h1
+            font-size: 1.6em
+        p
+            margin: 0
+            padding: 0
+            font-size: 1.2em
+    .review
+        height: 60%
+        padding: 15px
+        margin: 10px 5px
+
+    //form
+    .contact-us
+        padding: 15px
+    .contact-form
+        width: 100%
+        min-width: none
+        padding-bottom: 80px
+    .inputForms
+        width: 80%
+        margin: 5px 0
+    input[type=submit]
+        bottom: 2%
