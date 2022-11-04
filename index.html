@@ -111,18 +111,20 @@
     <article class="our-blogs">
         <h1>Check out our blogs</h1>
         <section>
-            <div>
+            <div class="mySlides fade" style="display: block;">
                 <div class="blog"><a href=""><img src="https://unsplash.it/400/300"></a></div>
                 <h1>Blog 1</h1>
             </div>
-            <div>
+            <div class="mySlides fade">
                 <div class="blog"><a href=""><img src="https://unsplash.it/400/300"></a></div>
                 <h1>Blog 2</h1>
             </div>
-            <div>
+            <div class="mySlides fade">
                 <div class="blog"><a href=""><img src="https://unsplash.it/400/300"></a></div>
                 <h1>Blog 3</h1>
             </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </section>
     </article>
 
@@ -144,7 +146,7 @@
                 <label for="SEO"><input type="checkbox" id="SEO" class="service"> Search Engine Optimisation</label>
                 <label for="GA"><input type="checkbox" id="PPC" class="service"> PPC/paid media</label><br>
                 <label for="WD"><input type="checkbox" id="WD" class="service"> Web design and development</label>
-                <label for="CRO"><input type="checkbox" id="CRO" class="service"> Conversion rate optimization</label><br>
+                <label for="CRO"><input type="checkbox" id="CRO" class="service"> Conversion rate optimisation</label><br>
                 <label for="DS"><input type="checkbox" id="PSA" class="service"> Paid social advertising</label>
                 <label for="EM"><input type="checkbox" id="EM" class="service"> Email Marketing</label>
                 <label for="all"><input type="checkbox" id="all" class="service"> All Services</label><br>
@@ -155,5 +157,33 @@
         </form></section>
     </article>
     </main>
+    <footer class="last-message">
+        <section>
+            <h2>Get in touch.</h2>
+            <p>TEL: 333 33 333 333</p>
+            <p>EMAIL: <a href="mailto:">(blank)@gmail.com</a></p>
+        </section>
+        <section>
+            <h2>What we do.</h2>
+            <ul>
+                <li><a href="">Search Engine Optimisation</a></li>
+                <li><a href="">Paid Media</a></li>
+                <li><a href="">Web Design and Development</a></li>
+                <li><a href="">Click Rate Optimisation</a></li>
+                <li><a href="">Paid Social Advertising</a></li>
+                <li><a href="">Email Marketing</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Follow us.</h2>
+            <div>
+                <a href="https://www.instagram.com/amniumdigital/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100086460657839"><i class="fa fa-facebook-square"></i></a>
+            </div>
+        </section>
+    </footer>
+    <footer class="copy-right">
+        <h6>© Copyright 2022. Amnium Digital Marketing Agency. <a href="">Privacy Centre</a></h6>
+    </footer>
 </body>
 </html>

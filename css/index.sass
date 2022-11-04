@@ -289,7 +289,8 @@ h1
             transition: 1s ease
             &:hover
                 transform: scale(1.1)
-
+.next, .prev
+    display: none
 
 //contact us article
 .contact-us
@@ -312,7 +313,7 @@ h1
 .contact-form
     background-color: #7100ce11
     border-radius: 15px
-    padding: 30px 10px 10px 10px
+    padding: 30px 10px 80px 10px
     width: 50%
     height: auto
     position: relative
@@ -347,8 +348,46 @@ input[type=submit]
     left: 50%
     transform: translate(-50%, -50%)
     color: $MainColor
+    transition: 0.3s
+    &:hover
+        background-color: $emphasis
+        color: $ThirdColor
 
-
+//footer
+footer
+    a
+        text-decoration: none
+        transition: ease 1.2s
+        &:hover
+            text-decoration-line: underline
+            color: $emphasis
+.last-message
+    display: flex
+    justify-content: space-evenly
+    height: 20%
+    background-color: #282230
+    padding: 20px 0
+    font-size: 1.2em
+    h2
+        color: $SecondaryColor
+    ul
+        list-style-type: none
+        padding: 0
+    div
+        display: flex
+        justify-content: space-around
+        width: 150px
+        i
+            transition: 1s
+            &:hover
+                font-size: 24px
+                color: $emphasis
+.copy-right
+    display: flex
+    justify-content: center
+    align-content: center
+    background-color: #201c25
+    
 @media screen and (max-width: 1500px)
     //main
     .our-offer
@@ -386,10 +425,8 @@ input[type=submit]
         flex-direction: column
     .contact-info
         width: 100%
-        //margin: 0 auto
     .contact-forum
         width: 100%   
-        //margin: 0 auto
 
 
 @media screen and (max-width: 1100px)
@@ -467,6 +504,40 @@ input[type=submit]
         p
             padding: 0 5px
             text-align: left
+    //blog
+    .our-blogs
+        section
+            position: relative
+            .mySlides
+                display: none
+
+    .prev, .next 
+        display: block
+        cursor: pointer
+        position: absolute
+        top: 50%
+        width: auto
+        margin-top: -22px
+        padding: 16px
+        color: white
+        font-weight: bold
+        font-size: 18px
+        transition: 0.6s ease
+        border-radius: 0 3px 3px 0
+        user-select: none
+    .next 
+        right: 0
+        border-radius: 3px 0 0 3px
+    .fade
+        animation-name: fade
+        animation-duration: 1.5s
+    
+
+    @keyframes fade 
+        0%
+            opacity: 0.4
+        100%
+            opacity: 1
 
     //clients
     .client-opinions
@@ -497,3 +568,7 @@ input[type=submit]
         margin: 5px 0
     input[type=submit]
         bottom: 2%
+    //footer
+    .last-message
+        flex-direction: column
+        padding: 10px 50px 50px 50px

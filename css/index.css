@@ -366,6 +366,10 @@ h1 {
   transform: scale(1.1);
 }
 
+.next, .prev {
+  display: none;
+}
+
 .contact-us {
   padding: 4vw 15vw 4vw 15vw;
   display: flex;
@@ -393,7 +397,7 @@ h1 {
 .contact-form {
   background-color: rgba(113, 0, 206, 0.0666666667);
   border-radius: 15px;
-  padding: 30px 10px 10px 10px;
+  padding: 30px 10px 80px 10px;
   width: 50%;
   height: auto;
   position: relative;
@@ -440,6 +444,56 @@ input[type=submit] {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #2e253a;
+  transition: 0.3s;
+}
+input[type=submit]:hover {
+  background-color: #f30000;
+  color: #ffffff;
+}
+
+footer a {
+  text-decoration: none;
+  transition: ease 1.2s;
+}
+footer a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #f30000;
+}
+
+.last-message {
+  display: flex;
+  justify-content: space-evenly;
+  height: 20%;
+  background-color: #282230;
+  padding: 20px 0;
+  font-size: 1.2em;
+}
+.last-message h2 {
+  color: #d7bd68;
+}
+.last-message ul {
+  list-style-type: none;
+  padding: 0;
+}
+.last-message div {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+}
+.last-message div i {
+  transition: 1s;
+}
+.last-message div i:hover {
+  font-size: 24px;
+  color: #f30000;
+}
+
+.copy-right {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #201c25;
 }
 
 @media screen and (max-width: 1500px) {
@@ -576,6 +630,56 @@ input[type=submit] {
     padding: 0 5px;
     text-align: left;
   }
+  .our-blogs section {
+    position: relative;
+  }
+  .our-blogs section .mySlides {
+    display: none;
+  }
+  .prev, .next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .client-opinions {
     padding: 0;
   }
@@ -610,5 +714,9 @@ input[type=submit] {
   }
   input[type=submit] {
     bottom: 2%;
+  }
+  .last-message {
+    flex-direction: column;
+    padding: 10px 50px 50px 50px;
   }
 }/*# sourceMappingURL=index.css.map */
