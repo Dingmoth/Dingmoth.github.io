@@ -44,7 +44,7 @@ nav
 #Navbutton
     border: none
     text-decoration: none
-    width: 80px
+    width: auto
     height: 100%
     display: flex
     justify-content: center
@@ -52,6 +52,8 @@ nav
     position: relative
     transition: 0.4s
     font-weight: 600
+    padding: 0 8px
+    margin: 0 4px
     &::after
         content: ''
         position: absolute
@@ -379,8 +381,8 @@ footer
         width: 150px
         i
             transition: 1s
+            font-size: 24px
             &:hover
-                font-size: 24px
                 color: $emphasis
 .copy-right
     display: flex
@@ -483,8 +485,9 @@ footer
         overflow: auto
         animation: animateFromBottom .3s
         a
-            padding: 40px 0
             font-size: 20px
+    #Navbutton
+        padding: 12px 0
     .show
         display: block
     .fa-bars

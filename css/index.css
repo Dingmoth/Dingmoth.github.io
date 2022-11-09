@@ -54,7 +54,7 @@ nav p {
 #Navbutton {
   border: none;
   text-decoration: none;
-  width: 80px;
+  width: auto;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -62,6 +62,8 @@ nav p {
   position: relative;
   transition: 0.4s;
   font-weight: 600;
+  padding: 0 8px;
+  margin: 0 4px;
 }
 #Navbutton::after {
   content: "";
@@ -483,9 +485,9 @@ footer a:hover {
 }
 .last-message div i {
   transition: 1s;
+  font-size: 24px;
 }
 .last-message div i:hover {
-  font-size: 24px;
   color: #f30000;
 }
 
@@ -608,8 +610,10 @@ footer a:hover {
             animation: animateFromBottom 0.3s;
   }
   .dropButtons a {
-    padding: 40px 0;
     font-size: 20px;
+  }
+  #Navbutton {
+    padding: 12px 0;
   }
   .show {
     display: block;

@@ -1,0 +1,240 @@
+$MainColor: #2e253a
+$SecondaryColor: #d7bd68
+$ThirdColor: #ffffff
+$emphasis: #f30000
+*
+    box-sizing: border-box
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    background-color: rgba(0, 0, 0, 0)
+    color: $ThirdColor
+body
+    margin: 0
+    background-color: $MainColor
+//nav
+nav
+    position: fixed
+    width: 100vw
+    background-color: $MainColor
+    display: grid
+    grid-template-columns: 0.2fr 0.8fr
+    grid-template-rows: 100%
+    height: 60px
+    z-index: 9
+    img
+        margin-left: 20px
+    p    
+        display: grid
+        justify-items: center
+        align-items: center
+        border: 0px
+        font-size: 20px
+        margin: 0 14px
+#dropdown
+    display: none
+
+.logo
+    height: 50px
+    margin: auto 30px
+.fa-solid
+    margin: auto 5px
+
+.buttons
+    display: flex
+    justify-content: right  
+    margin-right: 20px   
+#Navbutton
+    border: none
+    text-decoration: none
+    width: auto
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    transition: 0.4s
+    font-weight: 600
+    padding: 0 8px
+    margin: 0 4px
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 2px
+        left: 0
+        top: 0
+        background: $SecondaryColor
+        transform: scaleX(0)
+        transition: 0.4s
+    &:hover::after
+        transform: scaleX(1)
+    &:hover
+        color: $SecondaryColor  
+      
+.sticky
+    position: fixed
+    top: 0
+    width: 100%
+
+//contact-us
+.contact-us
+    padding: 8vw 15vw 5vw 15vw
+    display: flex
+    width: 100%
+    justify-content: center
+    align-content: center
+    background-image: url("https://unsplash.it/1920/1080")
+.contact-info
+    border-radius: 15px
+    text-align: center
+    width: 40%
+    height: 40%
+    margin-right: 10%
+    background-color: #2e253ab6
+    h1
+        font-size: 1.8em
+    p
+        padding: 0 10px 0 10px
+        font-size: 1.2em
+.contact-form
+    background-color: #2e253ab6
+    border-radius: 15px
+    padding: 30px 10px 80px 10px
+    height: auto
+    margin: 10px 0
+    position: relative
+.fill-in
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+.inputForms
+    border: 1px solid $SecondaryColor
+    background-color: $MainColor
+    color: $ThirdColor
+    border-radius: 5px
+    font-size: 1.3em
+    width: 45%
+    height: 50px
+    margin: 5px 10px 5px 10px
+.inputs
+    text-align: left
+    padding: 0 20px 0 20px
+    label
+        font-size: 1.1em
+        a
+            color: $SecondaryColor
+form
+    text-align: center
+input[type=submit]
+    width: 100px
+    height: 30px
+    background-color: $SecondaryColor
+    border: none
+    border-radius: 15px
+    position: absolute
+    bottom: 5%
+    left: 50%
+    transform: translate(-50%, -50%)
+    color: $MainColor
+    transition: 0.3s
+    &:hover
+        background-color: $emphasis
+        color: $ThirdColor   
+//footer
+footer
+    bottom: 0
+    a
+        text-decoration: none
+        transition: ease 1.2s
+        &:hover
+            text-decoration-line: underline
+            color: $emphasis
+.last-message
+    display: flex
+    justify-content: space-evenly
+    height: 20%
+    background-color: #282230
+    padding: 20px 0
+    font-size: 1.2em
+    h2
+        color: $SecondaryColor
+    ul
+        list-style-type: none
+        padding: 0
+    div
+        display: flex
+        justify-content: space-around
+        width: 150px
+        i
+            transition: 1s
+            font-size: 24px
+            &:hover
+                color: $emphasis
+.copy-right
+    display: flex
+    justify-content: center
+    align-content: center
+    background-color: #201c25
+
+
+// MEDIA
+@media screen and (max-width: 1500px)
+    //form media
+    .contact-us
+        //padding: 4vw 8vw 4vw 8vw
+        flex-direction: column
+        width: 100%
+    .contact-info
+        width: 100%
+    .contact-forum
+        width: 100%
+        min-width: none
+
+
+@media screen and (max-width: 800px)
+    //nav media
+    nav
+        height: 10vh
+        display: flex
+        justify-content: space-between
+        position: relative
+        transform-style: preserve-3d
+    .buttons
+        display: none
+    #dropdown
+        margin: auto 15px
+        display: flex
+    .dropButtons
+        display: none
+        position: absolute
+        width: 100%
+        background-color: $MainColor
+        top: 95%
+        right: -100%
+        transform: translateX(-100%)
+        overflow: auto
+        animation: animateFromBottom .3s
+        a
+            font-size: 20px
+    #Navbutton
+        padding: 12px 0
+    .show
+        display: block
+    .fa-bars
+        font-size: 2em
+
+    //form media
+    .contact-us
+        padding: 15px
+    .contact-form
+        width: 100%
+        min-width: none
+        padding-bottom: 80px
+    .inputForms
+        width: 80%
+        margin: 5px 0
+    input[type=submit]
+        bottom: 2%   
+    //footer media
+    .last-message
+        flex-direction: column
+        padding: 10px 50px 50px 50px
