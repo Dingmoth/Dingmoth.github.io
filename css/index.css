@@ -83,6 +83,10 @@ nav p {
   color: #d7bd68;
 }
 
+.contactLink {
+  width: 80px;
+}
+
 .sticky {
   position: fixed;
   top: 0;
