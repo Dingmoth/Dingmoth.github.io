@@ -1,0 +1,46 @@
+@import basic
+
+header
+    background-image: url('https://unsplash.it/1920/450')
+    height: 400px
+    overflow: hidden
+    display: grid
+    text-align: center
+    justify-content: center
+    align-content: center
+        
+.about-Amnium
+    &:nth-last-child(1)
+        background-color: #3a2d49
+    display: flex
+    justify-content: center
+    margin: 50px 0
+    gap: 5vw
+    padding: 40px 0
+    section
+        font-size: 1.2em
+        width: 35vw
+        padding: 15px
+
+.about-Amnium-img
+    background-size: cover
+    height: 30vw
+    overflow: hidden
+    border-radius: 15px
+    max-height: 500px
+.imgAM1
+    background-image: url('https://unsplash.it/400/400')
+.imgAM2
+    background-image: url('https://unsplash.it/400/400')
+
+@media screen and (max-width: 900px)
+    .about-Amnium
+        align-items: center
+        flex-direction: column
+        section
+            width: 90vw
+    .about-Amnium-img
+        height: 50vw
+        max-height: none
+    
+    

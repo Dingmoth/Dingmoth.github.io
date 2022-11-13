@@ -207,12 +207,19 @@ input[type=submit]:hover {
 }
 
 @media screen and (max-width: 1500px) {
-  .contact-info {
-    width: 100%;
-  }
   .contact-us {
     padding: 4vw 8vw 4vw 8vw;
     flex-direction: column;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-forum {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact-us {
     padding: 15px;
   }
   .contact-form {
@@ -281,4 +288,4 @@ footer a:hover {
     flex-direction: column;
     padding: 10px 50px 50px 50px;
   }
-}/*# sourceMappingURL=basic.css.map */
+}/*# sourceMappingURL=seo.css.map */

@@ -20,8 +20,6 @@ nav
     grid-template-rows: 100%
     height: 60px
     z-index: 9
-    img
-        margin-left: 20px
     p    
         display: grid
         justify-items: center
@@ -31,8 +29,8 @@ nav
         margin: 0 14px
 #dropdown
     display: none
-
 .logo
+    width: 70px
     height: 50px
     margin: auto 30px
 .fa-solid
@@ -81,6 +79,8 @@ nav
         justify-content: space-between
         position: relative
         transform-style: preserve-3d
+    .buttons
+        display: none
     #dropdown
         margin: auto 15px
         display: flex
@@ -162,15 +162,11 @@ input[type=submit]
         background-color: $emphasis
         color: $ThirdColor
 @media screen and (max-width: 1500px)
+    .contact-info
+        width: 100%
     .contact-us
         padding: 4vw 8vw 4vw 8vw
         flex-direction: column
-    .contact-info
-        width: 100%
-    .contact-forum
-        width: 100%
-@media screen and (max-width: 800px)
-    .contact-us
         padding: 15px
     .contact-form
         width: 100%
@@ -180,8 +176,8 @@ input[type=submit]
         width: 80%
         margin: 5px 0
     input[type=submit]
-        bottom: 2%       
-//footer
+        bottom: 2%  
+
 footer
     bottom: 0
     a
