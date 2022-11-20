@@ -115,7 +115,6 @@ nav p {
             animation: animateFromBottom 0.3s;
   }
   .dropButtons a {
-    padding: 40px 0;
     font-size: 20px;
   }
   .show {
@@ -165,7 +164,7 @@ nav p {
 }
 
 .inputForms {
-  border: 1px solid #ffffff;
+  border: 1px solid #d7bd68;
   border-radius: 5px;
   font-size: 1.3em;
   width: 45%;
@@ -282,7 +281,7 @@ footer a:hover {
     padding: 10px 50px 50px 50px;
   }
 }
-.background-tint {
+.tint {
   background-color: rgba(127, 74, 134, 0.5019607843);
   background-blend-mode: multiply;
 }
@@ -330,7 +329,7 @@ header button:hover {
 }
 .preamble section {
   width: 40vw;
-  height: 45vh;
+  height: auto;
   font-size: 1.6em;
 }
 .preamble section:nth-child(2) {
@@ -342,7 +341,7 @@ header button:hover {
 .options-container-grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(6, 55vh);
+  grid-template-rows: repeat(6, 16%);
 }
 .options-container-grid h1 {
   color: #121e30;
@@ -353,12 +352,10 @@ header button:hover {
   font-size: 1.3em;
 }
 .options-container-grid section {
-  min-height: 100%;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-.options-container-grid section:nth-of-type(2n+3), .options-container-grid section:nth-last-of-type(4n+1) {
   padding: 80px;
 }
 .options-container-grid section button {
@@ -367,10 +364,10 @@ header button:hover {
   color: #ffffff;
   background-color: #2e253a;
   border: none;
-  width: 30%;
-  height: 45px;
+  width: auto;
+  height: auto;
   transition: 0.2s;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 .options-container-grid section button:hover {
   cursor: pointer;
@@ -455,7 +452,7 @@ header button:hover {
   }
   .preamble section {
     width: 90%;
-    height: 25vh;
+    height: 50%;
   }
   .preamble section:nth-of-type(2) {
     height: 40vh;
@@ -464,7 +461,16 @@ header button:hover {
     display: flex;
     flex-direction: column;
   }
+}
+@media screen and (max-width: 600px) {
   .options-container-grid section {
-    height: 65vw;
+    padding: 10px;
+  }
+  .preamble {
+    margin: 20px 0;
+    gap: 20px;
+  }
+  .preamble section {
+    font-size: 1.3em;
   }
 }/*# sourceMappingURL=digital-marketing.css.map */

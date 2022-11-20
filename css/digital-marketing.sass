@@ -1,7 +1,7 @@
 @import basic
 
 //misc
-.background-tint
+.tint
     background-color: #7f4a8680
     background-blend-mode: multiply    
 //header
@@ -43,7 +43,7 @@ header
     gap: 80px
     section
         width: 40vw
-        height: 45vh
+        height: auto
         font-size: 1.6em
         &:nth-child(2)
             background-image: url('https://unsplash.it/500/500')
@@ -53,7 +53,7 @@ header
 .options-container-grid
     display: grid
     grid-template-columns: 50% 50%
-    grid-template-rows: repeat(6, 55vh)
+    grid-template-rows: repeat(6, 16%)
     h1
         color: #121e30
         font-size: 1.7em
@@ -61,29 +61,25 @@ header
         color: #121e30
         font-size: 1.3em
     section
-        min-height: 100%
+        min-height: 500px
         display: flex
         justify-content: center
         flex-direction: column
-        &:nth-of-type(2n+3), &:nth-last-of-type(4n+1)
-            padding: 80px
+        padding: 80px
         button
             font-size: 1.2em
             font-weight: 600
             color: $ThirdColor
             background-color: $MainColor
             border: none
-            width: 30%
-            height: 45px
+            width: auto
+            height: auto
             transition: 0.2s
-            padding: 0 20px
+            padding: 10px 20px
             &:hover
                 cursor: pointer
                 background-color: $ThirdColor   
                 color: $MainColor        
-        
-            
-
 
 .SEO1
     padding: 80px
@@ -146,14 +142,21 @@ header
         align-items: center
         section
             width: 90%
-            height: 25vh
+            height: 50%
             &:nth-of-type(2)
                 height: 40vh
-                
-
     .options-container-grid
         display: flex
         flex-direction: column
         section
-            height: 65vw
-            
+            //height: 65vw
+@media screen and (max-width: 600px)            
+    .options-container-grid
+        section
+            padding: 10px       
+    .preamble
+        margin: 20px 0
+        gap: 20px
+        section
+            font-size: 1.3em        
+
