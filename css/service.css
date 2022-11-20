@@ -363,7 +363,6 @@ footer a:hover {
 .canRelateCont li {
   font-size: 20px;
   padding: 0 0 5px 0;
-  border-bottom: 2px solid #2e253a;
   color: #2e253a;
   list-style-image: url("../img/icons/arrow.png");
 }
