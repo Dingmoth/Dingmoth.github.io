@@ -143,7 +143,7 @@ nav p {
   font-size: 1.2em;
 }
 .contact-info h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #ffffff;
   font-style: italic;
 }
@@ -284,13 +284,10 @@ footer a:hover {
 header {
   background-color: #ffffff;
   min-height: 20vw;
-  overflow: hidden;
+  padding: 75px 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 50px;
+  align-items: center;
 }
 header h1 {
   color: #2e253a;
@@ -317,6 +314,13 @@ header button:hover {
   cursor: pointer;
   background-color: #d7bd68;
 }
+header div {
+  width: 40%;
+}
+header img {
+  margin: 20px;
+  width: 30%;
+}
 
 main div {
   display: grid;
@@ -329,6 +333,8 @@ main div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 1.3em;
+  text-align: center;
 }
 
 .precentages {
@@ -421,6 +427,9 @@ main div {
 }
 
 @media screen and (max-width: 1000px) {
+  header img {
+    width: 280px;
+  }
   .choices ul {
     flex-direction: column;
     justify-content: center;
@@ -466,6 +475,13 @@ main div {
   .choices li {
     font-size: 1.2em;
     margin: 10px;
+    width: 100%;
+  }
+  header {
+    flex-flow: column-reverse;
+  }
+  header div {
+    text-align: center;
     width: 100%;
   }
 }/*# sourceMappingURL=our-service-services.css.map */
