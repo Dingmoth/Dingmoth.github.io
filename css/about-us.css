@@ -143,7 +143,7 @@ nav p {
   font-size: 1.2em;
 }
 .contact-info h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #ffffff;
   font-style: italic;
 }
@@ -295,7 +295,7 @@ header {
   display: flex;
   justify-content: center;
   margin: 50px 0;
-  gap: 5vw;
+  gap: 2vw;
   padding: 40px 0;
 }
 .about-Amnium:nth-last-child(1) {

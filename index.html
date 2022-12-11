@@ -9,6 +9,7 @@
     <title>Home</title>
     <script src="https://kit.fontawesome.com/069df6d784.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/universal.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 <body>
     <nav>
@@ -31,7 +32,7 @@
         <!-- dropdown end -->
     </nav>
     <div id="gif-Container">
-        <video class="fullscreen" src="/img/Sequence 01.mp4" playsinline autoplay muted loop>
+        <video class="fullscreen" src="/img/background.mp4" playsinline autoplay muted loop>
         </video>
         <div class="gif-contact">
             <h1><span>AMNIUM</span> DIGITAL</h1>
@@ -103,7 +104,7 @@
             <div class="fill-in">
                 <input type="text" class="inputForms" id="name" name="name" placeholder="Your Name" required>
                 <input type="email" class="inputForms" id="email" placeholder="Business Email" required>
-                <input type="number" class="inputForms" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="tel" class="inputForms" id="phoneNumber" placeholder="Phone Number" required>
                 <input type="url" class="inputForms" id="webURL" placeholder="Website URL (optional)">
             </div>
             <div class="inputs">
@@ -149,5 +150,26 @@
     <footer class="copy-right">
         <h6>© Copyright 2022. Amnium Digital Marketing Agency. <a href="">Privacy Centre</a></h6>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000"
+        },
+        "button": {
+          "background": "#f1d600"
+        }
+      },
+      "type": "opt-out",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Allow cookies",
+        "deny": "Decline",
+        "link": "Our Privacy Policy",
+        "href": "/privacy-policy.html"
+      }
+    });
+    </script>
 </body>
 </html>

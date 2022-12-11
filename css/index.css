@@ -355,6 +355,7 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #f30000;
   color: #ffffff;
+  cursor: pointer;
 }
 
 footer a {

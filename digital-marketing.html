@@ -9,6 +9,7 @@
     <title>Digital Marketing</title>
     <script src="https://kit.fontawesome.com/069df6d784.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/universal.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 <body>
     <nav>
@@ -125,7 +126,7 @@
     <footer class="last-message">
         <section>
             <h2>Get In Touch</h2>
-            <p>EMAIL: <a>info@amniumdigital.com</a></p>
+            <p>EMAIL: <a href="mailto:info@amniumdigital.com">info@amniumdigital.com</a></p>
         </section>
         <section>
             <h2>What We Do</h2>
@@ -149,5 +150,26 @@
     <footer class="copy-right">
         <h6>© Copyright 2022. Amnium Digital Marketing Agency. <a href="">Privacy Centre</a></h6>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000"
+        },
+        "button": {
+          "background": "#f1d600"
+        }
+      },
+      "type": "opt-out",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Allow cookies",
+        "deny": "Decline",
+        "link": "Our Privacy Policy",
+        "href": "/privacy-policy.html"
+      }
+    });
+    </script>
 </body>
 </html>
