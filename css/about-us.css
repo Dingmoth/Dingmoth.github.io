@@ -282,7 +282,8 @@ footer a:hover {
   }
 }
 header {
-  background-image: url("https://unsplash.it/1920/450");
+  background-image: url("/img/webb/about-us.JPG");
+  background-size: cover;
   height: 400px;
   overflow: hidden;
   display: grid;

@@ -287,7 +287,7 @@ footer a:hover {
 }
 
 .background {
-  background-image: url("https://unsplash.it/1920/500");
+  background-image: url("/img/webb/futuristicImg.png");
   height: 500px;
   overflow: hidden;
   display: grid;
@@ -346,7 +346,7 @@ footer a:hover {
 
 .canRelateCont {
   background-color: #d7bd68;
-  padding: 4vw 0;
+  padding: 2vw 0;
 }
 .canRelateCont h1 {
   color: #2e253a;
@@ -380,6 +380,7 @@ footer a:hover {
 
 .relateImg img {
   border-radius: 10px;
+  max-width: 700px;
   width: 100%;
 }
 
@@ -528,7 +529,7 @@ footer a:hover {
 }
 
 .background4 {
-  background-image: url("https://unsplash.it/1920/1000");
+  background-image: url("/img/webb/process.JPG");
   background-size: cover;
   overflow: hidden;
   display: grid;
@@ -675,5 +676,12 @@ footer a:hover {
   }
   .precentages div {
     width: 50%;
+  }
+  .canRelateCont ul {
+    margin: 0;
+  }
+  .canRelateCont li {
+    font-size: 15px;
+    padding: 0;
   }
 }/*# sourceMappingURL=service.css.map */
