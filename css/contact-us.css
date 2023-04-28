@@ -179,8 +179,7 @@ footer a {
   transition: ease 1.2s;
 }
 footer a:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #f30000;
 }
 
@@ -256,8 +255,7 @@ footer a:hover {
     right: -100%;
     transform: translateX(-100%);
     overflow: auto;
-    -webkit-animation: animateFromBottom 0.3s;
-            animation: animateFromBottom 0.3s;
+    animation: animateFromBottom 0.3s;
   }
   .dropButtons a {
     font-size: 20px;

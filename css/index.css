@@ -363,8 +363,7 @@ footer a {
   transition: ease 1.2s;
 }
 footer a:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #f30000;
 }
 
@@ -511,8 +510,7 @@ footer a:hover {
     right: -100%;
     transform: translateX(-100%);
     overflow: auto;
-    -webkit-animation: animateFromBottom 0.3s;
-            animation: animateFromBottom 0.3s;
+    animation: animateFromBottom 0.3s;
   }
   .dropButtons a {
     font-size: 20px;
@@ -560,7 +558,6 @@ footer a:hover {
     border-radius: 0 3px 3px 0;
     -webkit-user-select: none;
        -moz-user-select: none;
-        -ms-user-select: none;
             user-select: none;
   }
   .next {
@@ -568,18 +565,8 @@ footer a:hover {
     border-radius: 3px 0 0 3px;
   }
   .fade {
-    -webkit-animation-name: fade;
-            animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-  }
-  @-webkit-keyframes fade {
-    0% {
-      opacity: 0.4;
-    }
-    100% {
-      opacity: 1;
-    }
+    animation-name: fade;
+    animation-duration: 1.5s;
   }
   @keyframes fade {
     0% {
