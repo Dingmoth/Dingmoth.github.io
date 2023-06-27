@@ -1,23 +1,23 @@
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: roboto;
   background-color: rgba(0, 0, 0, 0);
-  color: #ffffff;
+  color: #243f55;
 }
 
 body {
   margin: 0;
-  background-color: #2e253a;
+  background-color: #ffffff;
 }
 
 nav {
   position: fixed;
   width: 100vw;
-  background-color: #2e253a;
+  background-color: #ffffff;
   display: grid;
   grid-template-columns: 0.2fr 0.8fr;
   grid-template-rows: 100%;
-  height: 60px;
+  height: 84px;
   z-index: 9;
 }
 nav p {
@@ -59,7 +59,6 @@ nav p {
   align-items: center;
   position: relative;
   transition: 0.4s;
-  font-weight: 600;
   padding: 0 8px;
   margin: 0 4px;
 }
@@ -69,8 +68,8 @@ nav p {
   width: 100%;
   height: 2px;
   left: 0;
-  top: 0;
-  background: #d7bd68;
+  bottom: 0;
+  background: #007d5a;
   transform: scaleX(0);
   transition: 0.4s;
 }
@@ -78,13 +77,27 @@ nav p {
   transform: scaleX(1);
 }
 #Navbutton:hover {
-  color: #d7bd68;
+  color: #007d5a;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.follow-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+.follow-us h4 {
+  font-weight: 600;
+  margin: 0 15px 0 0;
+}
+.follow-us a {
+  margin-right: 15px;
 }
 
 @media screen and (max-width: 800px) {
@@ -106,16 +119,14 @@ nav p {
     display: none;
     position: absolute;
     width: 100%;
-    background-color: #2e253a;
+    background-color: #ffffff;
     top: 95%;
     right: -100%;
     transform: translateX(-100%);
     overflow: auto;
-    -webkit-animation: animateFromBottom 0.3s;
-            animation: animateFromBottom 0.3s;
+    animation: animateFromBottom 0.3s;
   }
   .dropButtons a {
-    padding: 40px 0;
     font-size: 20px;
   }
   .show {
@@ -144,13 +155,12 @@ nav p {
   font-size: 1.2em;
 }
 .contact-info h2 {
-  font-size: 2em;
-  color: #ffffff;
+  font-size: 1.5em;
+  color: #243f55;
   font-style: italic;
 }
 
 .contact-form {
-  background-color: rgba(113, 0, 206, 0.0666666667);
   border-radius: 15px;
   padding: 30px 10px 80px 10px;
   width: 50%;
@@ -165,7 +175,7 @@ nav p {
 }
 
 .inputForms {
-  border: 1px solid #ffffff;
+  border: 1px solid #007d5a;
   border-radius: 5px;
   font-size: 1.3em;
   width: 45%;
@@ -181,7 +191,7 @@ nav p {
   font-size: 1.1em;
 }
 .inputs label a {
-  color: #d7bd68;
+  color: #007d5a;
 }
 
 form {
@@ -191,35 +201,28 @@ form {
 input[type=submit] {
   width: 100px;
   height: 30px;
-  background-color: #d7bd68;
+  background-color: #007d5a;
   border: none;
   border-radius: 15px;
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #2e253a;
+  color: #ffffff;
   transition: 0.3s;
 }
 input[type=submit]:hover {
-  background-color: #f30000;
-  color: #ffffff;
+  background-color: #007d5a;
+  color: #243f55;
 }
 
 @media screen and (max-width: 1500px) {
-  .contact-us {
-    padding: 4vw 8vw 4vw 8vw;
-    flex-direction: column;
-  }
   .contact-info {
     width: 100%;
   }
-  .contact-forum {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 800px) {
   .contact-us {
+    padding: 4vw 8vw 4vw 8vw;
+    flex-direction: column;
     padding: 15px;
   }
   .contact-form {
@@ -237,55 +240,44 @@ input[type=submit]:hover {
 }
 footer {
   bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+footer section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 footer a {
   text-decoration: none;
-  transition: ease 1.2s;
+  transition: ease 0.6s;
+  line-height: 50px;
 }
 footer a:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  color: #f30000;
+  color: #007d5a;
+  text-decoration: underline;
 }
 
 .last-message {
   display: flex;
   justify-content: space-evenly;
   height: 20%;
-  background-color: #282230;
   padding: 20px 0;
   font-size: 1.2em;
-}
-.last-message h2 {
-  color: #d7bd68;
-}
-.last-message ul {
-  list-style-type: none;
-  padding: 0;
-}
-.last-message div {
-  display: flex;
-  justify-content: space-around;
-  width: 150px;
-}
-.last-message div i {
-  transition: 1s;
-  font-size: 24px;
-}
-.last-message div i:hover {
-  color: #f30000;
 }
 
 .copy-right {
   display: flex;
   justify-content: center;
   align-content: center;
-  background-color: #201c25;
 }
 
 @media screen and (max-width: 800px) {
   .last-message {
     flex-direction: column;
     padding: 10px 50px 50px 50px;
+  }
+  .last-message section div a {
+    line-height: 25px;
   }
 }/*# sourceMappingURL=seo.css.map */
