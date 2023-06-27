@@ -308,7 +308,6 @@ footer a:hover {
   line-height: 65px;
 }
 .intro section p {
-  font-family: "Roboto Medium";
   line-height: 22px;
   color: #ffffff;
 }
@@ -330,10 +329,11 @@ footer a:hover {
   font-size: 59px;
   line-height: 65px;
   margin: 15px 0;
+  font-weight: 300;
 }
 .showcase section p {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 22px;
   margin: 0;
 }
@@ -426,7 +426,7 @@ footer a:hover {
     width: 90vw;
   }
   .showcase section h1 {
-    font-size: 10vw;
+    font-size: 8vw;
     line-height: 8vw;
   }
   .showcase section p {
@@ -434,26 +434,37 @@ footer a:hover {
     line-height: 4vw;
   }
   .showcase img {
-    width: 95vw;
+    width: 75vw;
+  }
+  .first {
+    margin-top: 100px;
   }
   .second {
     margin: 0px 12vw 100px 12vw;
   }
   .talk {
-    height: 450px;
+    height: 350px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
     padding: 0 0 30px;
   }
+  .talk h1 {
+    font-size: 45px;
+    margin-bottom: 0;
+  }
   .talk div {
-    width: 90vw;
+    width: 85vw;
+    display: grid;
+    justify-content: center;
   }
   .talk div button {
-    width: 90vw;
+    width: 87vw;
   }
   .talk div p {
-    line-height: 30px;
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 20px;
   }
   .last-message section div a {
     line-height: 25px;
