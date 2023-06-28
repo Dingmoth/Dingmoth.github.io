@@ -92,10 +92,10 @@ nav {
 .dropdown {
   position: absolute;
   width: 100vw;
-  top: 78px;
+  top: 75px;
   margin-top: 0.3rem;
   background: white;
-  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.5, 1);
   transform: translateY(0.5rem);
   visibility: hidden;
   opacity: 0;
@@ -141,7 +141,7 @@ nav {
 
 @media screen and (max-width: 800px) {
   nav {
-    height: 10vh;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     position: relative;
