@@ -5,6 +5,7 @@
   src: url("../fonts/Roboto-Light.ttf") format("truetype");
   font-family: "josefinSans";
   src: url("../fonts/JosefinSans-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 * {
   box-sizing: border-box;
