@@ -1,11 +1,10 @@
 @font-face {
   font-family: "roboto";
-  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  src: url(../fonts/Roboto-Medium.ttf) format("truetype");
   font-family: "roboto light";
-  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+  src: url(../fonts/Roboto-Light.ttf) format("truetype");
   font-family: "josefinSans";
-  src: url("../fonts/JosefinSans-Medium.ttf") format("truetype");
-  font-display: swap;
+  src: url(../fonts/JosefinSans-Medium.ttf) format("truetype");
 }
 * {
   box-sizing: border-box;
