@@ -12,7 +12,7 @@
 
 
 
-$MainColor: #ffffff
+$MainColor: #f1efe7
 $SecondaryColor: #007d5a
 $ThirdColor: #243f55
 $emphasis: #cfd138
@@ -76,7 +76,6 @@ nav
 
 //
 .btn 
-    background-color: white
     display: flex
     align-items: center
     justify-content: flex-start
@@ -93,7 +92,6 @@ nav
     width: 100vw
     top: 75px
     margin-top: 0.3rem
-    background: white
     transition: all 0.3s cubic-bezier(0.16, 1, 0.5, 1)
     transform: translateY(0.5rem)
     visibility: hidden
@@ -106,6 +104,7 @@ nav
     
 .dropdown
     a
+        background-color: $MainColor
         display: flex
         align-items: center
         padding: 0.8rem 1rem
@@ -113,7 +112,6 @@ nav
         color: black
     a:hover 
         background-color: $SecondaryColor
-        color: white
 
 .sticky
     position: fixed
