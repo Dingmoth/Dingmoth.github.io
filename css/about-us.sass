@@ -1,47 +1,125 @@
 @import 'basic'
 
-header
-    background-image: url('/img/webb/about-us.JPG')
-    background-size: cover
-    height: 400px
-    overflow: hidden
-    display: grid
-    text-align: center
-    justify-content: center
-    align-content: center
-        
-.about-Amnium
-    &:nth-last-child(1)
-        background-color: #3a2d49
+h1, h3
+    font-family: "josefinSans"
+h2, p
+    font-family: 'roboto light'
+p
+    font-weight: 600
+div
+    background-image: url('../img/AMNIUM\ \(4\).svg')
+
+.blogs
+    // display: grid
+    // grid-template-columns: 0.2fr 0.6fr 0.1fr 0.1fr
+    // background-color: $SecondaryColor
     display: flex
-    justify-content: center
-    margin: 50px 0
-    gap: 2vw
-    padding: 40px 0
-    section
-        font-size: 1.2em
-        width: 35vw
-        padding: 15px
-
-.about-Amnium-img
-    background-size: cover
-    height: 30vw
-    overflow: hidden
-    border-radius: 15px
-    max-height: 500px
-.imgAM1
-    background-image: url('https://unsplash.it/400/400')
-.imgAM2
-    background-image: url('https://unsplash.it/400/400')
-
-@media screen and (max-width: 900px)
-    .about-Amnium
+    justify-content: space-between
+    margin: 0 200px
+    div
+        width: 300px
+        display: flex
+        justify-content: space-evenly
         align-items: center
-        flex-direction: column
-        section
-            width: 90vw
-    .about-Amnium-img
-        height: 50vw
-        max-height: none
-    
-    
+        a
+            font-family: "roboto light"
+            font-weight: 600
+            text-decoration: none
+.holder
+    margin: 0 15vw
+.entry
+    h1
+        font-size: 50px
+        line-height: 60px 
+        margin: 20px 0
+    div
+        display: flex
+        align-items: center
+        a
+            text-decoration: none
+            margin: 0 20px
+
+.ourLogo
+    height: 400px
+    width: 100%
+
+.introduction
+    display: flex
+    justify-content: space-between
+    gap: 15px
+    margin-top: 60px
+    h1
+        font-size: 40px
+        margin-top: 40px
+        line-height: 0px
+        grid-area: a
+    p
+        text-align: right
+        font-size: 20px
+        width: 650px
+        grid-area: c
+    img
+        grid-area: b
+        height: 200px
+        width: 100%
+.weDo
+    border-top: solid 1px #cfcfcf
+    border-bottom: solid 1px #cfcfcf
+    margin: 120px 0
+    padding: 80px 0
+    display: grid
+    grid-template-columns: repeat(4, 0.25fr)
+    grid-template-rows: 0.8fr 1.4fr
+    grid-template-areas: 'a a a a'
+    gap: 15px
+    h1
+        font-size: 40px
+        text-align: center
+        grid-area: a
+    div
+        margin: 0 10px
+        h2
+            font-size: 35px
+            margin: 20px 0
+        p
+            font-size: 19px
+            line-height: 25px
+            margin: 0
+.theTeam
+    display: grid
+    ul
+        list-style: none
+        padding: 0
+        margin-top: 130px
+        &:last-child
+                border-bottom: solid 1px #cfcfcf
+        li
+            border-top: solid 1px #cfcfcf
+            font-size: 25px
+            line-height: 40px
+            padding: 10px 0
+    p
+        width: 700px
+        font-size: 30px
+        font-family: 'roboto light'
+        font-weight: 400
+        margin: 15px 0
+
+.theLead
+    display: flex
+    justify-content: space-between
+    div
+        img
+            width: 480px
+            height: 650px
+        h1
+            font-size: 30px
+            margin-bottom: 10px
+        h2
+            font-family: 'roboto light'
+            font-size: 22px
+            margin: 0 
+
+video
+    object-fit: cover
+    width: 100%

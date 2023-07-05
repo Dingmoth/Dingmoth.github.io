@@ -34,9 +34,8 @@ nav {
 }
 
 .logo {
-  width: 70px;
-  height: 50px;
-  margin: auto 30px;
+  width: 80px;
+  margin: auto 5px;
 }
 
 .fa-solid {
@@ -312,59 +311,160 @@ footer a:hover {
     line-height: 20px;
   }
 }
-header {
-  background-image: url("/img/webb/about-us.JPG");
-  background-size: cover;
-  height: 400px;
-  overflow: hidden;
-  display: grid;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
+h1, h3 {
+  font-family: "josefinSans";
 }
 
-.about-Amnium {
+h2, p {
+  font-family: "roboto light";
+}
+
+p {
+  font-weight: 600;
+}
+
+div {
+  background-image: url("../img/AMNIUM (4).svg");
+}
+
+.blogs {
   display: flex;
-  justify-content: center;
-  margin: 50px 0;
-  gap: 2vw;
-  padding: 40px 0;
+  justify-content: space-between;
+  margin: 0 200px;
 }
-.about-Amnium:nth-last-child(1) {
-  background-color: #3a2d49;
+.blogs div {
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.about-Amnium section {
-  font-size: 1.2em;
-  width: 35vw;
-  padding: 15px;
-}
-
-.about-Amnium-img {
-  background-size: cover;
-  height: 30vw;
-  overflow: hidden;
-  border-radius: 15px;
-  max-height: 500px;
+.blogs div a {
+  font-family: "roboto light";
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.imgAM1 {
-  background-image: url("https://unsplash.it/400/400");
+.holder {
+  margin: 0 15vw;
 }
 
-.imgAM2 {
-  background-image: url("https://unsplash.it/400/400");
+.entry h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 20px 0;
+}
+.entry div {
+  display: flex;
+  align-items: center;
+}
+.entry div a {
+  text-decoration: none;
+  margin: 0 20px;
 }
 
-@media screen and (max-width: 900px) {
-  .about-Amnium {
-    align-items: center;
-    flex-direction: column;
-  }
-  .about-Amnium section {
-    width: 90vw;
-  }
-  .about-Amnium-img {
-    height: 50vw;
-    max-height: none;
-  }
+.ourLogo {
+  height: 400px;
+  width: 100%;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 60px;
+}
+.introduction h1 {
+  font-size: 40px;
+  margin-top: 40px;
+  line-height: 0px;
+  grid-area: a;
+}
+.introduction p {
+  text-align: right;
+  font-size: 20px;
+  width: 650px;
+  grid-area: c;
+}
+.introduction img {
+  grid-area: b;
+  height: 200px;
+  width: 100%;
+}
+
+.weDo {
+  border-top: solid 1px #cfcfcf;
+  border-bottom: solid 1px #cfcfcf;
+  margin: 120px 0;
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 0.25fr);
+  grid-template-rows: 0.8fr 1.4fr;
+  grid-template-areas: "a a a a";
+  gap: 15px;
+}
+.weDo h1 {
+  font-size: 40px;
+  text-align: center;
+  grid-area: a;
+}
+.weDo div {
+  margin: 0 10px;
+}
+.weDo div h2 {
+  font-size: 35px;
+  margin: 20px 0;
+}
+.weDo div p {
+  font-size: 19px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.theTeam {
+  display: grid;
+}
+.theTeam ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 130px;
+}
+.theTeam ul:last-child {
+  border-bottom: solid 1px #cfcfcf;
+}
+.theTeam ul li {
+  border-top: solid 1px #cfcfcf;
+  font-size: 25px;
+  line-height: 40px;
+  padding: 10px 0;
+}
+.theTeam p {
+  width: 700px;
+  font-size: 30px;
+  font-family: "roboto light";
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.theLead {
+  display: flex;
+  justify-content: space-between;
+}
+.theLead div img {
+  width: 480px;
+  height: 650px;
+}
+.theLead div h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.theLead div h2 {
+  font-family: "roboto light";
+  font-size: 22px;
+  margin: 0;
+}
+
+video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }/*# sourceMappingURL=about-us.css.map */
