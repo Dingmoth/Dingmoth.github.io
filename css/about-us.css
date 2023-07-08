@@ -343,7 +343,7 @@ div {
 }
 
 .holder {
-  margin: 0 15vw;
+  margin: 0 200px;
 }
 
 .entry h1 {
@@ -380,7 +380,7 @@ div {
 .introduction p {
   text-align: right;
   font-size: 20px;
-  width: 650px;
+  width: 40vw;
   grid-area: c;
 }
 .introduction img {
@@ -425,18 +425,17 @@ div {
   list-style: none;
   padding: 0;
   margin-top: 130px;
-}
-.theTeam ul:last-child {
   border-bottom: solid 1px #cfcfcf;
 }
 .theTeam ul li {
   border-top: solid 1px #cfcfcf;
   font-size: 25px;
-  line-height: 40px;
+  line-height: 38px;
   padding: 10px 0;
 }
 .theTeam p {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   font-size: 30px;
   font-family: "roboto light";
   font-weight: 400;
@@ -446,10 +445,10 @@ div {
 .theLead {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .theLead div img {
-  width: 480px;
-  height: 650px;
+  width: 30vw;
 }
 .theLead div h1 {
   font-size: 30px;
@@ -465,4 +464,165 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+
+#review {
+  margin: 50px 0;
+  background-color: #007d5a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 0;
+}
+#review button {
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  color: #f1efe7;
+  padding: 0;
+  background-color: #243f55;
+  transition: 0.5s;
+}
+#review button:hover {
+  background-color: #f1efe7;
+  cursor: pointer;
+}
+#review button img {
+  transition: 0.5s;
+  width: 100%;
+}
+#review button img:hover {
+  filter: invert(99%) sepia(5%) saturate(351%) hue-rotate(337deg) brightness(98%) contrast(92%);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 15vw;
+  min-width: 200px;
+}
+
+.review {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+}
+
+.review-slider {
+  display: flex;
+}
+
+.review-slide {
+  flex: 1 0 100%;
+  padding: 3px;
+}
+.review-slide h1 {
+  color: #f1efe7;
+  font-size: 2.5em;
+}
+.review-slide p {
+  font-family: "roboto light";
+  font-weight: 200;
+  color: #f1efe7;
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .blogs {
+    margin: 0 100px;
+  }
+  .holder {
+    margin: 0 100px;
+  }
+  .introduction {
+    flex-direction: column;
+  }
+  .introduction p {
+    width: 100%;
+  }
+  .weDo {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0.5fr repeat(2, 0.8fr);
+    grid-template-areas: "a a";
+  }
+  #review {
+    flex-direction: column;
+  }
+  .review {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .blogs {
+    margin: 0 10px;
+  }
+  .blogs h1 {
+    font-size: 28px;
+  }
+  .blogs div {
+    width: 150px;
+  }
+  .holder {
+    margin: 0 10px;
+  }
+  .entry h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .introduction h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .introduction p {
+    font-size: 18px;
+    text-align: left;
+  }
+  .weDo {
+    margin: 60px 0;
+    padding: 40px 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px repeat(4, 220);
+    grid-template-areas: "a";
+  }
+  .weDo h1 {
+    font-size: 30px;
+  }
+  .weDo div h2 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .weDo div p {
+    font-size: 17px;
+  }
+  .theLead {
+    flex-direction: column;
+  }
+  .theLead div img {
+    width: 100%;
+  }
+  .theLead div h1 {
+    font-size: 25px;
+  }
+  .theLead div h2 {
+    font-size: 19px;
+  }
+  .theTeam ul {
+    margin-top: 70px;
+  }
+  .theTeam p {
+    font-size: 24px;
+  }
+  .review {
+    width: 95%;
+  }
+  .review-slide h1 {
+    font-size: 1.7em;
+  }
+  .review-slide p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+  }
 }/*# sourceMappingURL=about-us.css.map */

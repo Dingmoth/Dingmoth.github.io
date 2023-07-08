@@ -9,10 +9,9 @@ p
 div
     background-image: url('../img/AMNIUM\ \(4\).svg')
 
+
+
 .blogs
-    // display: grid
-    // grid-template-columns: 0.2fr 0.6fr 0.1fr 0.1fr
-    // background-color: $SecondaryColor
     display: flex
     justify-content: space-between
     margin: 0 200px
@@ -26,7 +25,7 @@ div
             font-weight: 600
             text-decoration: none
 .holder
-    margin: 0 15vw
+    margin: 0 200px
 .entry
     h1
         font-size: 50px
@@ -56,7 +55,7 @@ div
     p
         text-align: right
         font-size: 20px
-        width: 650px
+        width: 40vw
         grid-area: c
     img
         grid-area: b
@@ -91,15 +90,16 @@ div
         list-style: none
         padding: 0
         margin-top: 130px
-        &:last-child
-                border-bottom: solid 1px #cfcfcf
+        border-bottom: solid 1px #cfcfcf
         li
             border-top: solid 1px #cfcfcf
             font-size: 25px
-            line-height: 40px
+            line-height: 38px
             padding: 10px 0
+
     p
-        width: 700px
+        width: 100%
+        max-width: 700px
         font-size: 30px
         font-family: 'roboto light'
         font-weight: 400
@@ -108,10 +108,10 @@ div
 .theLead
     display: flex
     justify-content: space-between
+    gap: 20px
     div
         img
-            width: 480px
-            height: 650px
+            width: 30vw
         h1
             font-size: 30px
             margin-bottom: 10px
@@ -123,3 +123,133 @@ div
 video
     object-fit: cover
     width: 100%
+
+#review
+    margin: 50px 0
+    background-color: $SecondaryColor
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 100px 0
+    button
+        border: 0
+        border-radius: 50%
+        width: 60px
+        height: 60px
+        color: $MainColor
+        padding: 0
+        background-color: $ThirdColor
+        transition: 0.5s
+        &:hover
+            background-color: $MainColor
+            cursor: pointer
+        img
+            transition: 0.5s
+            &:hover
+                filter: invert(99%) sepia(5%) saturate(351%) hue-rotate(337deg) brightness(98%) contrast(92%)
+            width: 100%
+.btn-container
+    display: flex
+    justify-content: space-between
+    gap: 15px
+    width: 15vw
+    min-width: 200px
+
+    
+
+
+.review 
+    position: relative
+    overflow: hidden
+    width: 50%
+.review-slider 
+    display: flex
+.review-slide 
+    flex: 1 0 100%
+    padding: 3px
+    h1
+        color: $MainColor
+        font-size: 2.5em
+    p
+        font-family: "roboto light"
+        font-weight: 200
+        color: $MainColor
+        font-size: 1.4em
+        line-height: 1.5em
+
+@media screen and (max-width: 1200px)
+    .blogs
+        margin: 0 100px
+    .holder
+        margin: 0 100px
+    .introduction
+        flex-direction: column
+        p
+            width: 100%
+    .weDo
+        grid-template-columns: 50% 50%
+        grid-template-rows: 0.5fr repeat(2, 0.8fr)
+        grid-template-areas: 'a a'
+
+    #review
+        flex-direction: column
+    .review
+        width: 80%
+@media screen and (max-width: 800px)
+    .blogs
+        margin: 0 10px
+        h1
+            font-size: 28px
+        div
+            width: 150px
+    .holder
+        margin: 0 10px
+    .entry
+        h1
+            font-size: 30px
+            line-height: 35px
+    .introduction
+        h1
+            font-size: 30px
+            line-height: 32px
+        p
+            font-size: 18px
+            text-align: left
+
+    .weDo
+        margin: 60px 0
+        padding: 40px 0
+        grid-template-columns: 100%
+        grid-template-rows: 60px repeat(4, 220)
+        grid-template-areas: 'a'
+        h1
+            font-size: 30px
+        div
+            h2
+                font-size: 25px
+                margin: 10px 0
+            p
+                font-size: 17px
+    
+    .theLead
+        flex-direction: column
+        div
+            img
+                width: 100%
+            h1
+                font-size: 25px
+            h2
+                font-size: 19px
+    .theTeam
+        ul
+            margin-top: 70px
+        p
+            font-size: 24px
+    .review
+        width: 95%
+    .review-slide
+        h1
+            font-size: 1.7em
+        p
+            font-size: 1.2em
+            line-height: 1.3em

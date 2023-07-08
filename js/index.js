@@ -29,4 +29,3 @@ setTimeout(() =>{
         aTag.classList.remove('noCursor');
     });
 }, 4600);
-
