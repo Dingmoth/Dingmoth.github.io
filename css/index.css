@@ -14,18 +14,18 @@
   box-sizing: border-box;
   font-family: "roboto";
   background-color: rgba(0, 0, 0, 0);
-  color: #243f55;
+  color: #000000;
 }
 
 body {
   margin: 0;
-  background-color: #f1efe7;
+  background-color: #ffffff;
 }
 
 nav {
   position: fixed;
   width: 100vw;
-  background-color: #f1efe7;
+  background-color: rgba(255, 255, 255, 0);
   display: grid;
   grid-template-columns: 0.2fr 0.8fr 190px;
   grid-template-rows: 100%;
@@ -34,8 +34,8 @@ nav {
 }
 
 .logo {
-  width: 80px;
-  margin: auto 5px;
+  width: 90px;
+  margin: auto 60px;
 }
 
 .fa-solid {
@@ -59,6 +59,7 @@ nav {
   position: relative;
   transition: 0.4s;
   padding: 0 12px;
+  cursor: pointer;
 }
 #Navbutton::after {
   content: "";
@@ -67,7 +68,7 @@ nav {
   height: 2px;
   left: 0;
   bottom: 0;
-  background: #007d5a;
+  background: #000000;
   transform: scaleX(0);
   transition: 0.4s;
 }
@@ -75,7 +76,7 @@ nav {
   transform: scaleX(1);
 }
 #Navbutton:hover {
-  color: #007d5a;
+  color: #000000;
 }
 
 .btn {
@@ -109,7 +110,7 @@ nav {
 }
 
 .dropdown a {
-  background-color: #f1efe7;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   padding: 0.8rem 1rem;
@@ -158,6 +159,9 @@ nav {
     visibility: visible;
     opacity: 1;
   }
+  .logo {
+    margin: auto 20px;
+  }
 }
 .contact-us {
   padding: 4vw 15vw 4vw 15vw;
@@ -179,7 +183,7 @@ nav {
 }
 .contact-info h2 {
   font-size: 1.5em;
-  color: #243f55;
+  color: #000000;
   font-style: italic;
 }
 
@@ -231,12 +235,12 @@ input[type=submit] {
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f1efe7;
+  color: #ffffff;
   transition: 0.3s;
 }
 input[type=submit]:hover {
   background-color: #007d5a;
-  color: #243f55;
+  color: #000000;
 }
 
 @media screen and (max-width: 1500px) {
@@ -305,32 +309,12 @@ footer a:hover {
   }
   .last-message section a {
     padding-right: 5px;
-    border-right: 1px solid #243f55;
+    border-right: 1px solid #000000;
     line-height: 20px;
   }
 }
-.voodoo {
-  opacity: 0;
-  transition: 0.4s;
-  cursor: none;
-}
-
-#cover {
-  width: 100%;
-  height: 99vh;
-  position: absolute;
-  top: -50px;
-}
-
-.hiden {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
 .intro {
   padding: 150px 50px 115px 50px;
-  background-color: #007d5a;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -347,17 +331,31 @@ footer a:hover {
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #f1efe7;
   line-height: 65px;
 }
 .intro section p {
   line-height: 22px;
-  color: #f1efe7;
   font-family: "roboto light";
+  font-weight: 600;
 }
 .intro section img {
   width: 35px;
   height: 15px;
+}
+
+.video {
+  display: flex;
+  justify-content: space-around;
+}
+
+#moveDown {
+  transform: rotate(90deg);
+  border: 0px;
+  font-size: 19px;
+}
+
+video {
+  width: 75%;
 }
 
 .showcase {
@@ -398,15 +396,16 @@ footer a:hover {
 
 .talk {
   height: 385px;
-  background-color: #007d5a;
+  background-color: #000000;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-items: center;
   padding: 0 15vw;
+  margin-top: 55px;
 }
 .talk h1 {
-  color: #f1efe7;
+  color: #ffffff;
   font-size: 60px;
   line-height: 73px;
 }
@@ -415,22 +414,22 @@ footer a:hover {
   text-align: center;
 }
 .talk div p {
-  color: #f1efe7;
+  color: #ffffff;
   font-size: 22px;
   line-height: 48px;
 }
 .talk div button {
   height: 66px;
   width: 335px;
-  color: #f1efe7;
+  color: #ffffff;
   font-size: 23px;
   line-height: 33px;
-  border: 2px solid #f1efe7;
+  border: 2px solid #ffffff;
   transition: 0.5s;
 }
 .talk div button:hover {
-  color: #007d5a;
-  background-color: #f1efe7;
+  color: #ffffff;
+  background-color: #000000;
   cursor: pointer;
 }
 
@@ -463,6 +462,12 @@ footer a:hover {
   .intro section h1 {
     font-size: 6vw;
     line-height: 40px;
+  }
+  #moveDown {
+    display: none;
+  }
+  video {
+    width: 100%;
   }
   .showcase {
     display: grid;
@@ -517,7 +522,4 @@ footer a:hover {
     font-size: 17px;
     line-height: 20px;
   }
-}
-.noCursor {
-  cursor: none;
 }/*# sourceMappingURL=index.css.map */

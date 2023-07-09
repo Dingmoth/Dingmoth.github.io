@@ -12,10 +12,10 @@
 
 
 
-$MainColor: #f1efe7
+$MainColor: #ffffff
 $SecondaryColor: #007d5a
-$ThirdColor: #243f55
-$emphasis: #cfd138
+$ThirdColor: #000000
+$emphasis: #cfd13800
 *
     box-sizing: border-box
     font-family: "roboto"
@@ -28,7 +28,7 @@ body
 nav
     position: fixed
     width: 100vw
-    background-color: $MainColor
+    background-color: #ffffff00
     display: grid
     grid-template-columns: 0.2fr 0.8fr 190px
     grid-template-rows: 100%
@@ -39,8 +39,8 @@ nav
 
 
 .logo
-    width: 80px
-    margin: auto 5px
+    width: 90px
+    margin: auto 60px
 .fa-solid
     margin: auto 5px
 
@@ -59,6 +59,7 @@ nav
     position: relative
     transition: 0.4s
     padding: 0 12px
+    cursor: pointer
     &::after
         content: ''
         position: absolute
@@ -66,13 +67,13 @@ nav
         height: 2px
         left: 0
         bottom: 0
-        background: $SecondaryColor
+        background: $ThirdColor
         transform: scaleX(0)
         transition: 0.4s
     &:hover::after
         transform: scaleX(1)
     &:hover
-        color: $SecondaryColor  
+        color: $ThirdColor 
 
 //
 .btn 
@@ -142,6 +143,8 @@ nav
     .btn
         visibility: visible
         opacity: 1
+    .logo
+        margin: auto 20px
 
 //contact-us
 .contact-us
