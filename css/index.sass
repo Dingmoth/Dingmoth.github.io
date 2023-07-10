@@ -1,20 +1,21 @@
 @import 'basic'
 
-// .voodoo
-//     opacity: 0
-//     transition: 0.4s
-//     cursor: none
-// #cover
-//     width: 100%
-//     height: 99vh
-//     position: absolute
-//     top: -50px
-// .hiden
-//     height: 100%
-//     overflow: hidden
-//     position: relative
-// .noCursor
-//     cursor: none
+.voodoo
+    opacity: 0
+    transition: 0.4s
+    cursor: none
+    display: none
+#cover
+    width: 100%
+    height: 99vh
+    position: absolute
+    top: -50px
+.hiden
+    height: 100%
+    overflow: hidden
+    position: relative
+.noCursor
+    cursor: none
 
 .intro
     padding: 150px 50px 115px 50px
@@ -54,33 +55,41 @@ video
     width: 75%
 
 
-.showcase
-    margin: 0 12vw
+.articleSpecialties
     display: flex
     justify-content: center
-    gap: 95px
-    section
-        width: 420px
-        h1
-            font-size: 59px
-            line-height: 65px
-            margin: 15px 0
-            font-weight: 700
-            font-family: "josefinSans"
-        p
-            font-size: 18px
-            font-weight: thin
-            line-height: 22px
-            margin: 0
-    img
-        width: 566px
+    width: 100%
+    border-bottom: solid 1px #cfcfcf
+    margin: 50px 0
+    gap: 20px
+    p
+        width: 30%
+        font-family: "roboto light" 
+        font-weight: 400
+        font-size: 24px
+.specialtiesContainer
+    display: flex
+    justify-content: center
+    flex-direction: column
+    width: 30%
+.specialties
+    display: flex
+    justify-content: space-between
+    width: 100%
+    i
+        transition: 0.6s
+        transform: rotate(0deg)
+.specialtiesShown
+    width: 100%
+    height: 0
+    overflow: hidden
+    transition: 0.3s
+    p
+        font-size: 22px
+        width: 100%
+        margin: 0
 
-.first
-    margin: 200px 12vw 100px 12vw
-    grid-template-columns: 1.4fr 1fr  
-.second
-    grid-template-columns: 1fr 1.4fr  
-    margin-bottom: 100px  
+
 
 
 .talk
@@ -123,14 +132,27 @@ video
         div
             img
                 max-width: 60vw
-    .showcase
-        margin: 100px 4vw
-        img
-            width: 35vw
+    .articleSpecialties
+        p
+            width: 40%
+            font-family: "roboto light" 
+            font-weight: 400
+            font-size: 24px
+    .specialtiesContainer
+        width: 40%
+    .specialties
+        display: flex
+        justify-content: space-between
+        width: 90%
+    .specialtiesShown
+        width: 90%
+        p
+            width: 100%
+            font-size: 20px
 
 @media screen and (max-width: 800px) 
     .intro
-        padding: 0
+        padding: 30px 0 0 0
         grid-template-rows: 0.6fr 1fr
         div
             img
@@ -144,28 +166,28 @@ video
         display: none
     video
         width: 100%
-    .showcase
-        display: grid
-        justify-items: center
-        grid-template-columns: 1fr
-        grid-template-rows: 1fr 1fr
-        margin: 10px
-        gap: 15px
-        section
-            margin: 10px
-            width: 90vw
-            h1
-                font-size: 8vw
-                line-height: 8vw
-            p
-                font-size: 4vw
-                line-height: 4vw 
-        img
-            width: 75vw
-    .first
-        margin-top: 100px 
-    .second
-        margin: 0px 12vw 100px 12vw
+
+    .articleSpecialties
+        flex-direction: column
+        p
+            margin: auto
+            width: 90%
+            font-family: "roboto light" 
+            font-weight: 400
+            font-size: 24px
+    .specialtiesContainer
+        margin: auto
+        width: 90%
+    .specialties
+        display: flex
+        justify-content: space-between
+        width: 100%
+    .specialtiesShown
+        width: 100%
+        p
+            width: 100%
+            font-size: 20px
+
     .talk
         height: 350px
         display: grid

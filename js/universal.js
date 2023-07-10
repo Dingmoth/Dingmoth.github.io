@@ -13,8 +13,8 @@ dropdownBtn.addEventListener("click", function (e) {
     toggleDropdown();
 });
 
-document.documentElement.addEventListener("click", function () {
-    if (dropdownMenu.classList.contains("show")) {
-      toggleDropdown();
-    }
-});
+// document.documentElement.addEventListener("click", function () {
+//     if (dropdownMenu.classList.contains("show")) {
+//       toggleDropdown();
+//     }
+// });
