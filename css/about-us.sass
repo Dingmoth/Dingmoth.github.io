@@ -9,7 +9,8 @@ p
 div
     background-image: url('../img/AMNIUM\ \(4\).svg')
 
-
+main
+    padding: 0 200px
 
 .blogs
     display: flex
@@ -24,8 +25,7 @@ div
             font-family: "roboto light"
             font-weight: 600
             text-decoration: none
-.holder
-    margin: 0 200px
+
 .entry
     h1
         font-size: 50px
@@ -38,45 +38,41 @@ div
             text-decoration: none
             margin: 0 20px
 
-.ourLogo
-    height: 400px
-    width: 100%
-
 .introduction
-    display: flex
-    justify-content: space-between
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 0.2fr 0.8fr
+    grid-template-areas: 'a .' '. b'
     gap: 15px
-    margin-top: 60px
+    padding: 100px 0
     h1
         font-size: 40px
-        margin-top: 40px
-        line-height: 0px
+        margin: 0
         grid-area: a
     p
-        text-align: right
         font-size: 20px
-        width: 40vw
-        grid-area: c
-    img
         grid-area: b
-        height: 200px
-        width: 100%
+
 .weDo
     border-top: solid 1px #cfcfcf
     border-bottom: solid 1px #cfcfcf
     margin: 120px 0
     padding: 80px 0
-    display: grid
-    grid-template-columns: repeat(4, 0.25fr)
-    grid-template-rows: 0.8fr 1.4fr
-    grid-template-areas: 'a a a a'
-    gap: 15px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
     h1
         font-size: 40px
         text-align: center
-        grid-area: a
+        width: 100%
+.weDoContainer
+    display: flex
+    justify-content: space-evenly
+    width: 50%
     div
+        width: 50%
         margin: 0 10px
+        text-align: center
         h2
             font-size: 35px
             margin: 20px 0
@@ -138,10 +134,8 @@ video
         height: 60px
         color: $MainColor
         padding: 0
-        background-color: $ThirdColor
         transition: 0.5s
         &:hover
-            background-color: $MainColor
             cursor: pointer
         img
             transition: 0.5s
@@ -180,16 +174,18 @@ video
 @media screen and (max-width: 1200px)
     .blogs
         margin: 0 100px
-    .holder
-        margin: 0 100px
+    main
+        padding: 0 100px
     .introduction
-        flex-direction: column
-        p
-            width: 100%
+        grid-template-areas: 'a .' 'b b'
+        h1
+            font-size: 35px
     .weDo
-        grid-template-columns: 50% 50%
-        grid-template-rows: 0.5fr repeat(2, 0.8fr)
-        grid-template-areas: 'a a'
+        flex-direction: column
+    .weDoContainer
+        width: 100%
+        div
+            width: 50%
 
     #review
         flex-direction: column
@@ -202,29 +198,28 @@ video
             font-size: 28px
         div
             width: 150px
-    .holder
-        margin: 0 10px
+    main
+        padding: 0 10px
     .entry
         h1
             font-size: 30px
             line-height: 35px
     .introduction
+        grid-template-areas: 'a a' 'b b'
         h1
             font-size: 30px
-            line-height: 32px
         p
             font-size: 18px
-            text-align: left
 
     .weDo
-        margin: 60px 0
-        padding: 40px 0
-        grid-template-columns: 100%
-        grid-template-rows: 60px repeat(4, 220)
-        grid-template-areas: 'a'
         h1
             font-size: 30px
+    .weDoContainer
+        flex-direction: column
+        justify-content: center
         div
+            width: 100%
+            margin: 8px 0
             h2
                 font-size: 25px
                 margin: 10px 0

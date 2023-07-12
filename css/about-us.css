@@ -33,9 +33,13 @@ nav {
   z-index: 8;
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .logo {
   width: 90px;
-  margin: auto 0px auto 250px;
+  margin: auto 20px;
   z-index: 9;
 }
 
@@ -57,7 +61,7 @@ nav {
   cursor: pointer;
   border: none;
   position: relative;
-  margin-right: 100px;
+  margin-right: 20px;
   z-index: 8;
 }
 
@@ -276,47 +280,68 @@ footer {
   display: flex;
   justify-content: center;
 }
-footer section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 25px;
-}
-footer a {
-  text-decoration: none;
-  transition: ease 0.6s;
-  line-height: 30px;
-}
-footer a:hover {
-  color: #007d5a;
-  text-decoration: underline;
-}
 
 .last-message {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 20%;
-  padding: 20px 0;
+  padding: 20px 50px;
   font-size: 1.2em;
   margin-top: 50px;
 }
+.last-message section {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+.last-message section p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.last-message section div {
+  display: flex;
+  gap: 15px;
+  margin: 5px 0;
+}
+.last-message section a {
+  text-align: right;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+.last-message section a:hover {
+  text-decoration: underline;
+}
 
+.annoying {
+  margin-left: auto;
+  width: 60%;
+}
+
+@media screen and (max-width: 1200px) {
+  .annoying {
+    margin: auto;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 800px) {
   .last-message {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
   .last-message section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    font-size: 14px;
-    width: 90vw;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .last-message section div {
+    justify-content: center;
   }
   .last-message section a {
-    padding-right: 5px;
-    border-right: 1px solid #000000;
-    line-height: 20px;
+    text-align: center;
+  }
+  .annoying {
+    width: 40%;
   }
 }
 h1, h3 {
@@ -333,6 +358,10 @@ p {
 
 div {
   background-image: url("../img/AMNIUM (4).svg");
+}
+
+main {
+  padding: 0 200px;
 }
 
 .blogs {
@@ -352,10 +381,6 @@ div {
   text-decoration: none;
 }
 
-.holder {
-  margin: 0 200px;
-}
-
 .entry h1 {
   font-size: 50px;
   line-height: 60px;
@@ -370,33 +395,22 @@ div {
   margin: 0 20px;
 }
 
-.ourLogo {
-  height: 400px;
-  width: 100%;
-}
-
 .introduction {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-areas: "a ." ". b";
   gap: 15px;
-  margin-top: 60px;
+  padding: 100px 0;
 }
 .introduction h1 {
   font-size: 40px;
-  margin-top: 40px;
-  line-height: 0px;
+  margin: 0;
   grid-area: a;
 }
 .introduction p {
-  text-align: right;
   font-size: 20px;
-  width: 40vw;
-  grid-area: c;
-}
-.introduction img {
   grid-area: b;
-  height: 200px;
-  width: 100%;
 }
 
 .weDo {
@@ -404,25 +418,31 @@ div {
   border-bottom: solid 1px #cfcfcf;
   margin: 120px 0;
   padding: 80px 0;
-  display: grid;
-  grid-template-columns: repeat(4, 0.25fr);
-  grid-template-rows: 0.8fr 1.4fr;
-  grid-template-areas: "a a a a";
-  gap: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .weDo h1 {
   font-size: 40px;
   text-align: center;
-  grid-area: a;
+  width: 100%;
 }
-.weDo div {
+
+.weDoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.weDoContainer div {
+  width: 50%;
   margin: 0 10px;
+  text-align: center;
 }
-.weDo div h2 {
+.weDoContainer div h2 {
   font-size: 35px;
   margin: 20px 0;
 }
-.weDo div p {
+.weDoContainer div p {
   font-size: 19px;
   line-height: 25px;
   margin: 0;
@@ -491,11 +511,9 @@ video {
   height: 60px;
   color: #ffffff;
   padding: 0;
-  background-color: #000000;
   transition: 0.5s;
 }
 #review button:hover {
-  background-color: #ffffff;
   cursor: pointer;
 }
 #review button img {
@@ -544,19 +562,23 @@ video {
   .blogs {
     margin: 0 100px;
   }
-  .holder {
-    margin: 0 100px;
+  main {
+    padding: 0 100px;
   }
   .introduction {
-    flex-direction: column;
+    grid-template-areas: "a ." "b b";
   }
-  .introduction p {
-    width: 100%;
+  .introduction h1 {
+    font-size: 35px;
   }
   .weDo {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 0.5fr repeat(2, 0.8fr);
-    grid-template-areas: "a a";
+    flex-direction: column;
+  }
+  .weDoContainer {
+    width: 100%;
+  }
+  .weDoContainer div {
+    width: 50%;
   }
   #review {
     flex-direction: column;
@@ -575,36 +597,38 @@ video {
   .blogs div {
     width: 150px;
   }
-  .holder {
-    margin: 0 10px;
+  main {
+    padding: 0 10px;
   }
   .entry h1 {
     font-size: 30px;
     line-height: 35px;
   }
+  .introduction {
+    grid-template-areas: "a a" "b b";
+  }
   .introduction h1 {
     font-size: 30px;
-    line-height: 32px;
   }
   .introduction p {
     font-size: 18px;
-    text-align: left;
-  }
-  .weDo {
-    margin: 60px 0;
-    padding: 40px 0;
-    grid-template-columns: 100%;
-    grid-template-rows: 60px repeat(4, 220);
-    grid-template-areas: "a";
   }
   .weDo h1 {
     font-size: 30px;
   }
-  .weDo div h2 {
+  .weDoContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .weDoContainer div {
+    width: 100%;
+    margin: 8px 0;
+  }
+  .weDoContainer div h2 {
     font-size: 25px;
     margin: 10px 0;
   }
-  .weDo div p {
+  .weDoContainer div p {
     font-size: 17px;
   }
   .theLead {

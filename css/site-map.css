@@ -33,9 +33,13 @@ nav {
   z-index: 8;
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .logo {
   width: 90px;
-  margin: auto 0px auto 250px;
+  margin: auto 20px;
   z-index: 9;
 }
 
@@ -57,7 +61,7 @@ nav {
   cursor: pointer;
   border: none;
   position: relative;
-  margin-right: 100px;
+  margin-right: 20px;
   z-index: 8;
 }
 
@@ -276,47 +280,68 @@ footer {
   display: flex;
   justify-content: center;
 }
-footer section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 25px;
-}
-footer a {
-  text-decoration: none;
-  transition: ease 0.6s;
-  line-height: 30px;
-}
-footer a:hover {
-  color: #007d5a;
-  text-decoration: underline;
-}
 
 .last-message {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 20%;
-  padding: 20px 0;
+  padding: 20px 50px;
   font-size: 1.2em;
   margin-top: 50px;
 }
+.last-message section {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+.last-message section p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.last-message section div {
+  display: flex;
+  gap: 15px;
+  margin: 5px 0;
+}
+.last-message section a {
+  text-align: right;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+}
+.last-message section a:hover {
+  text-decoration: underline;
+}
 
+.annoying {
+  margin-left: auto;
+  width: 60%;
+}
+
+@media screen and (max-width: 1200px) {
+  .annoying {
+    margin: auto;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 800px) {
   .last-message {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
   .last-message section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    font-size: 14px;
-    width: 90vw;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .last-message section div {
+    justify-content: center;
   }
   .last-message section a {
-    padding-right: 5px;
-    border-right: 1px solid #000000;
-    line-height: 20px;
+    text-align: center;
+  }
+  .annoying {
+    width: 40%;
   }
 }
 header {
