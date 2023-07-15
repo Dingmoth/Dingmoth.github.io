@@ -140,6 +140,9 @@ nav {
   padding: 5px;
   font-size: 15px;
 }
+.follow-us button {
+  border: none;
+}
 
 @media screen and (max-width: 800px) {
   nav {
@@ -626,6 +629,7 @@ video {
   }
   .weDoContainer div h2 {
     font-size: 25px;
+    letter-spacing: 15px;
     margin: 10px 0;
   }
   .weDoContainer div p {

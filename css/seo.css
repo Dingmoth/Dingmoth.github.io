@@ -140,6 +140,9 @@ nav {
   padding: 5px;
   font-size: 15px;
 }
+.follow-us button {
+  border: none;
+}
 
 @media screen and (max-width: 800px) {
   nav {

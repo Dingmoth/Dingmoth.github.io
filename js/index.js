@@ -49,7 +49,7 @@ const showSpecialties = function (i) {
             element.style.height = "0px";
         });
         specialties[i].querySelector("i").style.transform = "rotate(-180deg)";
-        specialtiesShown[i].style.height = "250px";
+        specialtiesShown[i].style.height = "380px";
     }
 };
   
@@ -65,3 +65,40 @@ specialties[2].addEventListener("click", function() {
 specialties[3].addEventListener("click", function() {
     showSpecialties(3);
 });
+
+
+// const cursorPointed = document.getElementById("mousePlay");
+
+
+// const moveCursor = (e)=> {
+//   const mouseY = e.clientY;
+//   const mouseX = e.clientX;
+   
+  
+//   cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+ 
+// }
+
+// document.addEventListener('mousemove', moveCursor);
+
+let mouseCursor = document.querySelector("#mousePlay");
+let videoEl = document.querySelector("video");
+
+videoEl.addEventListener('DOMContentLoaded', cursor);
+videoEl.addEventListener('mousemove', cursor);
+videoEl.addEventListener('mouseenter', () => mouseCursor.style.display = 'block');
+videoEl.addEventListener('mouseleave', () => mouseCursor.style.display = 'none');
+
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+      jQuery('#mousePlay').remove();
+    } else {
+      mouseCursor.style.display = 'none';
+    }
+
+function cursor(e){
+
+    mouseCursor.style.top = "calc(" +e.clientY + "px - 1rem)";
+    mouseCursor.style.left = "calc(" +e.clientX + "px - 1rem)";
+}
+
