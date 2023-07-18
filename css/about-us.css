@@ -78,16 +78,13 @@ nav {
 }
 
 .holder {
-  display: grid;
-  grid-template-columns: 0.2fr 0.8fr;
-  grid-template-rows: 0.8fr 0.2fr;
-  grid-template-areas: ". b" "a b";
+  display: flex;
+  place-content: center;
   width: 80%;
   height: 90%;
   margin: 0 auto;
 }
 .holder a {
-  margin: 0.8rem 0 0.8rem 1rem;
   text-decoration: none;
   font-size: 22px;
   color: black;
@@ -102,9 +99,13 @@ nav {
   gap: 25px;
 }
 .holder ul li {
-  display: flex;
-  justify-content: right;
-  align-items: center;
+  text-align: center;
+}
+.holder ul li button {
+  border: none;
+}
+.holder ul li button img {
+  width: 30px;
 }
 
 .blackbar {
@@ -123,25 +124,6 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.follow-us {
-  display: flex;
-  align-items: center;
-  margin-right: 18px;
-  grid-area: a;
-}
-.follow-us h4 {
-  font-weight: 600;
-  margin: 0 15px 0 0;
-}
-.follow-us a {
-  margin-right: 15px;
-  padding: 5px;
-  font-size: 15px;
-}
-.follow-us button {
-  border: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -163,17 +145,8 @@ nav {
   .btn {
     margin-right: 20px;
   }
-  .follow-us {
-    margin: 12px;
-    align-items: end;
-  }
   .holder {
     width: 100%;
-    grid-template-areas: "b ." "a .";
-  }
-  .holder ul li {
-    margin-left: 12px;
-    justify-content: left;
   }
 }
 .contact-us {
@@ -482,6 +455,14 @@ main {
 }
 .theLead div img {
   width: 30vw;
+  transition: all 0.5s;
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.theLead div img:hover {
+  filter: grayscale(0);
 }
 .theLead div h1 {
   font-size: 30px;

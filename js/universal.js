@@ -46,3 +46,6 @@ const changeLanguage = () => {
         vid.src = "/img/EN VERSIJA.mp4";
     }
 }
+
+
+

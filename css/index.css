@@ -78,16 +78,13 @@ nav {
 }
 
 .holder {
-  display: grid;
-  grid-template-columns: 0.2fr 0.8fr;
-  grid-template-rows: 0.8fr 0.2fr;
-  grid-template-areas: ". b" "a b";
+  display: flex;
+  place-content: center;
   width: 80%;
   height: 90%;
   margin: 0 auto;
 }
 .holder a {
-  margin: 0.8rem 0 0.8rem 1rem;
   text-decoration: none;
   font-size: 22px;
   color: black;
@@ -102,9 +99,13 @@ nav {
   gap: 25px;
 }
 .holder ul li {
-  display: flex;
-  justify-content: right;
-  align-items: center;
+  text-align: center;
+}
+.holder ul li button {
+  border: none;
+}
+.holder ul li button img {
+  width: 30px;
 }
 
 .blackbar {
@@ -123,25 +124,6 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.follow-us {
-  display: flex;
-  align-items: center;
-  margin-right: 18px;
-  grid-area: a;
-}
-.follow-us h4 {
-  font-weight: 600;
-  margin: 0 15px 0 0;
-}
-.follow-us a {
-  margin-right: 15px;
-  padding: 5px;
-  font-size: 15px;
-}
-.follow-us button {
-  border: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -163,17 +145,8 @@ nav {
   .btn {
     margin-right: 20px;
   }
-  .follow-us {
-    margin: 12px;
-    align-items: end;
-  }
   .holder {
     width: 100%;
-    grid-template-areas: "b ." "a .";
-  }
-  .holder ul li {
-    margin-left: 12px;
-    justify-content: left;
   }
 }
 .contact-us {
@@ -347,6 +320,17 @@ footer {
     width: 40%;
   }
 }
+.borderLine {
+  display: flex;
+  place-content: center;
+  width: 100%;
+}
+.borderLine span {
+  padding: 50px 0;
+  width: 80%;
+  border-bottom: solid 1px #cfcfcf;
+}
+
 .intro {
   padding: 150px 50px 115px 50px;
   display: grid;
@@ -379,19 +363,19 @@ footer {
 
 #mousePlay {
   background-color: #000000;
-  border-radius: 10px;
-  width: 75px;
-  height: 40px;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
   padding: 5px;
-  text-align: center;
   pointer-events: none;
   z-index: 20000;
   transform-origin: center center;
   transition-property: background, transform;
   position: fixed;
+  text-align: center;
 }
 #mousePlay h2 {
-  margin: 0;
+  margin: 30% 0;
   color: #ffffff;
 }
 
@@ -414,26 +398,49 @@ video {
   width: 100%;
 }
 
+.youtubeButton {
+  display: none;
+  place-content: center;
+  margin: 15px;
+}
+.youtubeButton a {
+  border: solid 2px #000000;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
 .articleSpecialties {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
   width: 100%;
-  border-bottom: solid 1px #cfcfcf;
-  margin: 50px 0;
+  margin: 70px 0;
   gap: 20px;
 }
 .articleSpecialties p {
-  width: 30%;
+  width: 40%;
   font-family: "roboto light";
   font-weight: 400;
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 38px;
+  margin-right: 30px;
+}
+.articleSpecialties span {
+  padding: 50px 0;
+  width: 80%;
+  border-bottom: solid 1px #cfcfcf;
+}
+
+.articleSpecHolder {
+  display: flex;
+  justify-content: center;
 }
 
 .specialtiesContainer {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 30%;
+  width: 35%;
 }
 
 .specialties {
@@ -441,9 +448,14 @@ video {
   justify-content: space-between;
   width: 100%;
 }
+.specialties h2 {
+  font-weight: 100;
+  font-size: 30px;
+  font-family: "roboto light";
+}
 .specialties i {
-  transition: 0.6s;
-  transform: rotate(0deg);
+  transition: all 0.3s ease-in;
+  transform: rotate(-180deg);
 }
 
 .specialtiesShown {
@@ -453,9 +465,10 @@ video {
   transition: 0.3s;
 }
 .specialtiesShown p {
-  font-size: 22px;
+  font-size: 20px;
   width: 100%;
   margin: 0;
+  line-height: 24px;
 }
 
 .talk {
@@ -497,6 +510,55 @@ video {
   cursor: pointer;
 }
 
+.howWeWork {
+  display: grid;
+  margin: 20px 15%;
+  text-align: center;
+}
+.howWeWork h3 {
+  font-family: "roboto light";
+  font-weight: 100;
+  font-size: 24px;
+  margin: 18px 0;
+}
+.howWeWork p {
+  font-family: "roboto light";
+  font-size: 17px;
+  font-weight: 100;
+  color: #212529;
+}
+.howWeWork section {
+  display: flex;
+  place-content: center;
+  margin: 80px 0;
+  gap: 20px;
+}
+
+.howWeWorkDivHold {
+  display: flex;
+  gap: 20px;
+}
+.howWeWorkDivHold img {
+  width: 60px;
+  height: 70px;
+}
+
+.howWeWorkTitle {
+  display: grid;
+  text-align: center;
+}
+.howWeWorkTitle h2 {
+  font-family: "roboto light";
+  font-size: 32px;
+}
+.howWeWorkTitle p {
+  font-family: "roboto light";
+  font-weight: 100;
+  font-size: 24px;
+  margin: 15px 20%;
+  color: #212529;
+}
+
 @media screen and (max-width: 1200px) {
   .intro {
     grid-template-columns: 1fr;
@@ -506,25 +568,37 @@ video {
     max-width: 60vw;
   }
   .articleSpecialties p {
-    width: 40%;
-    font-family: "roboto light";
-    font-weight: 400;
-    font-size: 24px;
+    text-align: center;
+    width: 80%;
+    font-size: 28px;
+    margin: 24px 10%;
+  }
+  .articleSpecHolder {
+    flex-direction: column;
+    justify-content: center;
   }
   .specialtiesContainer {
-    width: 40%;
+    width: 100%;
   }
   .specialties {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 80%;
+    margin: 0 10%;
   }
   .specialtiesShown {
-    width: 90%;
+    width: 80%;
+    margin: 0 10%;
   }
   .specialtiesShown p {
+    text-align: left;
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .howWeWork section {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 800px) {
@@ -545,8 +619,14 @@ video {
   #moveDown {
     display: none;
   }
+  .video {
+    display: block;
+  }
   video {
     width: 100%;
+  }
+  .youtubeButton {
+    display: flex;
   }
   .articleSpecialties {
     flex-direction: column;
@@ -556,23 +636,42 @@ video {
     width: 90%;
     font-family: "roboto light";
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 22px;
   }
   .specialtiesContainer {
     margin: auto;
     width: 90%;
   }
   .specialties {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
+    margin: 0;
+    font-size: 20px;
   }
   .specialtiesShown {
     width: 100%;
+    margin: 0;
   }
   .specialtiesShown p {
     width: 100%;
+    font-size: 18px;
+  }
+  .howWeWork {
+    margin: 20px 5%;
+  }
+  .howWeWorkTitle h2 {
+    font-family: "roboto light";
+    font-size: 28px;
+  }
+  .howWeWorkTitle p {
+    font-family: "roboto light";
+    font-weight: 100;
     font-size: 20px;
+    margin: 15px 0;
+    color: #212529;
+  }
+  .howWeWorkDivHold {
+    flex-direction: column;
   }
   .talk {
     height: 350px;

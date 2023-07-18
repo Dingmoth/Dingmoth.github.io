@@ -37,49 +37,52 @@ const specialties = document.querySelectorAll(".specialties");
 const specialtiesShown = document.querySelectorAll(".specialtiesShown");
 
 
-const showSpecialties = function (i) {
+const showSpecialties = function (i, vert) {
     if (specialtiesShown[i].offsetHeight >= 200) {
         specialtiesShown[i].style.height = "0px";
-        specialties[i].querySelector("i").style.transform = "rotate(0deg)";
+        specialties[i].querySelector("i").style.transform = "rotate(-180deg)";
     } else {
         specialties.forEach(element => {
-            element.querySelector("i").style.transform = "rotate(0deg)";
+            element.querySelector("i").style.transform = "rotate(-180deg)";
         });
         specialtiesShown.forEach(element => {
             element.style.height = "0px";
         });
-        specialties[i].querySelector("i").style.transform = "rotate(-180deg)";
-        specialtiesShown[i].style.height = "380px";
+        specialties[i].querySelector("i").style.transform = "rotate(0deg)";
+        specialtiesShown[i].style.height = `${vert}px`;
     }
 };
   
 specialties[0].addEventListener("click", function() {
-    showSpecialties(0);
+    if ($(window).width() < 550) {
+        showSpecialties(0, 270);
+    }   else {
+    showSpecialties(0, 170);
+    }
 });
 specialties[1].addEventListener("click", function() {
-    showSpecialties(1);
+    if ($(window).width() < 550) {
+        showSpecialties(1, 370);
+    }   else {
+    showSpecialties(1, 220);
+    }
 });
 specialties[2].addEventListener("click", function() {
-    showSpecialties(2);
+    if ($(window).width() < 550) {
+        showSpecialties(2, 418);
+    }   else {
+    showSpecialties(2, 280);
+    }
 });
 specialties[3].addEventListener("click", function() {
-    showSpecialties(3);
+    if ($(window).width() < 550) {
+        showSpecialties(3, 490);
+    }   else {
+    showSpecialties(3, 290);
+    }
 });
 
 
-// const cursorPointed = document.getElementById("mousePlay");
-
-
-// const moveCursor = (e)=> {
-//   const mouseY = e.clientY;
-//   const mouseX = e.clientX;
-   
-  
-//   cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
- 
-// }
-
-// document.addEventListener('mousemove', moveCursor);
 
 let mouseCursor = document.querySelector("#mousePlay");
 let videoEl = document.querySelector("video");

@@ -12,6 +12,8 @@
 
 
 
+
+
 $MainColor: #ffffff
 $SecondaryColor: #007d5a
 $ThirdColor: #000000
@@ -75,16 +77,12 @@ nav
     visibility: hidden
     background-color: $MainColor
 .holder
-    display: grid
-    grid-template-columns: 0.2fr 0.8fr
-    grid-template-rows: 0.8fr 0.2fr
-    grid-template-areas: '. b' 'a b'
+    display: flex
+    place-content: center
     width: 80%
     height: 90%
     margin: 0 auto
-
     a
-        margin: 0.8rem 0 0.8rem 1rem
         text-decoration: none
         font-size: 22px
         color: black
@@ -97,9 +95,11 @@ nav
         grid-area: b
         gap: 25px
         li
-            display: flex
-            justify-content: right
-            align-items: center
+            text-align: center
+            button
+                border: none
+                img
+                    width: 30px
 
 .blackbar
     height: 10%
@@ -117,20 +117,6 @@ nav
     top: 0
     width: 100%
 
-.follow-us
-    display: flex
-    align-items: center
-    margin-right: 18px
-    grid-area: a
-    h4
-        font-weight: 600
-        margin: 0 15px 0 0
-    a
-        margin-right: 15px
-        padding: 5px
-        font-size: 15px
-    button
-        border: none
 
 
 @media screen and (max-width: 800px)
@@ -147,16 +133,8 @@ nav
         margin: auto 20px
     .btn
         margin-right: 20px
-    .follow-us
-        margin: 12px
-        align-items: end
     .holder
         width: 100%
-        grid-template-areas: 'b .' 'a .'
-        ul
-            li
-                margin-left: 12px
-                justify-content: left
         
 
 //contact-us

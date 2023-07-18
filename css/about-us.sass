@@ -1,5 +1,12 @@
 @import 'basic'
 
+=filter($filter-type,$filter-amount)
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})')
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})')
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})')
+  -o-filter: $filter-type+unquote('(#{$filter-amount})')
+  filter: $filter-type+unquote('(#{$filter-amount})')
+
 h1, h3
     font-family: "josefinSans"
 h2, p
@@ -108,6 +115,10 @@ main
     div
         img
             width: 30vw
+            transition: all 0.5s
+            +filter(grayscale,100%)
+            &:hover
+                filter: grayscale(0)
         h1
             font-size: 30px
             margin-bottom: 10px
