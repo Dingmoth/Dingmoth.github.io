@@ -76,6 +76,12 @@ nav {
   visibility: hidden;
   background-color: #ffffff;
 }
+.dropdown button {
+  border: none;
+}
+.dropdown button img {
+  width: 30px;
+}
 
 .holder {
   display: flex;
@@ -101,11 +107,8 @@ nav {
 .holder ul li {
   text-align: center;
 }
-.holder ul li button {
-  border: none;
-}
-.holder ul li button img {
-  width: 30px;
+.holder ul li i {
+  margin: 0 10px;
 }
 
 .blackbar {
@@ -537,6 +540,10 @@ video {
 .howWeWorkDivHold {
   display: flex;
   gap: 20px;
+  width: 50%;
+}
+.howWeWorkDivHold div {
+  width: 50%;
 }
 .howWeWorkDivHold img {
   width: 60px;
@@ -600,21 +607,33 @@ video {
   .howWeWork section {
     flex-direction: column;
   }
+  .howWeWorkDivHold {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 800px) {
   .intro {
     padding: 30px 0 0 0;
-    grid-template-rows: 0.6fr 1fr;
+    grid-template-rows: 1fr 0.6fr;
+    grid-template-areas: "b" "a";
+  }
+  .intro div {
+    grid-area: a;
   }
   .intro div img {
     max-width: 95vw;
   }
   .intro section {
+    margin-top: 35px;
+    grid-area: b;
     width: 90vw;
   }
   .intro section h1 {
     font-size: 6vw;
     line-height: 40px;
+  }
+  .intro section p {
+    margin: 15px 0 0 0;
   }
   #moveDown {
     display: none;
@@ -672,6 +691,9 @@ video {
   }
   .howWeWorkDivHold {
     flex-direction: column;
+  }
+  .howWeWorkDivHold div {
+    width: 100%;
   }
   .talk {
     height: 350px;

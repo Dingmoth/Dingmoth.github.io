@@ -76,6 +76,12 @@ nav {
   visibility: hidden;
   background-color: #ffffff;
 }
+.dropdown button {
+  border: none;
+}
+.dropdown button img {
+  width: 30px;
+}
 
 .holder {
   display: flex;
@@ -101,11 +107,8 @@ nav {
 .holder ul li {
   text-align: center;
 }
-.holder ul li button {
-  border: none;
-}
-.holder ul li button img {
-  width: 30px;
+.holder ul li i {
+  margin: 0 10px;
 }
 
 .blackbar {

@@ -202,6 +202,9 @@ video
 .howWeWorkDivHold
     display: flex
     gap: 20px
+    width: 50%
+    div
+        width: 50%
     img
         width: 60px
         height: 70px
@@ -255,19 +258,27 @@ video
     .howWeWork
         section
             flex-direction: column
+    .howWeWorkDivHold
+        width: 100%
 
 @media screen and (max-width: 800px) 
     .intro
         padding: 30px 0 0 0
-        grid-template-rows: 0.6fr 1fr
+        grid-template-rows: 1fr 0.6fr
+        grid-template-areas: 'b' 'a'
         div
+            grid-area: a
             img
                 max-width: 95vw
         section
+            margin-top: 35px
+            grid-area: b
             width: 90vw
             h1
                 font-size: 6vw
                 line-height: 40px
+            p
+                margin: 15px 0 0 0
     #moveDown
         display: none
     .video
@@ -316,6 +327,8 @@ video
             color: #212529
     .howWeWorkDivHold
         flex-direction: column
+        div
+            width: 100%
 
     .talk
         height: 350px
