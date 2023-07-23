@@ -323,6 +323,30 @@ footer {
     width: 40%;
   }
 }
+.voodoo {
+  opacity: 0;
+  transition: 0.4s;
+  cursor: none;
+  display: none;
+}
+
+#cover {
+  width: 100%;
+  height: 99vh;
+  position: absolute;
+  top: -50px;
+}
+
+.hiden {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.noCursor {
+  cursor: none;
+}
+
 .borderLine {
   display: flex;
   place-content: center;
@@ -546,7 +570,7 @@ video {
   width: 50%;
 }
 .howWeWorkDivHold img {
-  width: 60px;
+  width: 70px;
   height: 70px;
 }
 

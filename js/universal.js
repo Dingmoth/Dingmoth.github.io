@@ -23,13 +23,14 @@ const ltButton = document.getElementById("lt");
 const enButton = document.getElementById("en");
 
 
-
 ltButton.addEventListener("click", function(){
     language = 'lt';
+    sessionStorage.setItem('lang', 'LT');
     changeLanguage();
 });
 enButton.addEventListener("click", function(){
     language = 'en';
+    sessionStorage.setItem('lang', 'EN');
     changeLanguage();
 });
 
@@ -47,5 +48,8 @@ const changeLanguage = () => {
     }
 }
 
-
+if (sessionStorage.getItem('lang') == 'LT') {
+    language = 'lt';
+    changeLanguage();
+};
 
