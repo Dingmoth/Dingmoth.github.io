@@ -10,9 +10,13 @@
   font-family: "josefinSans";
   src: url("../fonts/JosefinSans-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "LeagueSpartanEL";
+  src: url("../fonts/LeagueSpartan-Light.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
-  font-family: "roboto";
+  font-family: "LeagueSpartanEL";
   background-color: rgba(0, 0, 0, 0);
   color: #000000;
 }
@@ -92,7 +96,7 @@ nav {
 }
 .holder a {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 32px;
   color: black;
 }
 .holder ul {
@@ -275,7 +279,7 @@ footer {
 }
 .last-message section p {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .last-message section div {
   display: flex;
@@ -285,8 +289,8 @@ footer {
 .last-message section a {
   text-align: right;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 20px;
 }
 .last-message section a:hover {
   text-decoration: underline;
@@ -380,7 +384,7 @@ footer {
 }
 .intro section p {
   line-height: 22px;
-  font-family: "roboto light";
+  font-size: 20px;
   font-weight: 600;
 }
 .intro section img {
@@ -446,7 +450,6 @@ video {
 }
 .articleSpecialties p {
   width: 40%;
-  font-family: "roboto light";
   font-weight: 400;
   font-size: 30px;
   line-height: 38px;
@@ -478,7 +481,6 @@ video {
 .specialties h2 {
   font-weight: 100;
   font-size: 30px;
-  font-family: "roboto light";
 }
 .specialties i {
   transition: all 0.3s ease-in;
@@ -543,15 +545,12 @@ video {
   text-align: center;
 }
 .howWeWork h3 {
-  font-family: "roboto light";
-  font-weight: 100;
+  font-weight: 600;
   font-size: 24px;
   margin: 18px 0;
 }
 .howWeWork p {
-  font-family: "roboto light";
-  font-size: 17px;
-  font-weight: 100;
+  font-size: 20px;
   color: #212529;
 }
 .howWeWork section {
@@ -579,13 +578,10 @@ video {
   text-align: center;
 }
 .howWeWorkTitle h2 {
-  font-family: "roboto light";
-  font-size: 32px;
+  font-size: 36px;
 }
 .howWeWorkTitle p {
-  font-family: "roboto light";
-  font-weight: 100;
-  font-size: 24px;
+  font-size: 28px;
   margin: 15px 20%;
   color: #212529;
 }
@@ -677,7 +673,6 @@ video {
   .articleSpecialties p {
     margin: auto;
     width: 90%;
-    font-family: "roboto light";
     font-weight: 400;
     font-size: 20px;
     line-height: 22px;
@@ -703,11 +698,9 @@ video {
     margin: 20px 5%;
   }
   .howWeWorkTitle h2 {
-    font-family: "roboto light";
     font-size: 28px;
   }
   .howWeWorkTitle p {
-    font-family: "roboto light";
     font-weight: 100;
     font-size: 20px;
     margin: 15px 0;

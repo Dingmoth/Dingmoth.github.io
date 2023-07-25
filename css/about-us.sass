@@ -7,10 +7,10 @@
   -o-filter: $filter-type+unquote('(#{$filter-amount})')
   filter: $filter-type+unquote('(#{$filter-amount})')
 
-h1, h3
-    font-family: "josefinSans"
-h2, p
-    font-family: 'roboto light'
+// h1, h3
+//     font-family: "josefinSans"
+// h2, p
+//     font-family: 'roboto light'
 p
     font-weight: 600
 div
@@ -18,20 +18,6 @@ div
 
 main
     padding: 0 200px
-
-.blogs
-    display: flex
-    justify-content: space-between
-    margin: 0 200px
-    div
-        width: 300px
-        display: flex
-        justify-content: space-evenly
-        align-items: center
-        a
-            font-family: "roboto light"
-            font-weight: 600
-            text-decoration: none
 
 .entry
     h1
@@ -57,8 +43,9 @@ main
         margin: 0
         grid-area: a
     p
-        font-size: 20px
+        font-size: 28px
         grid-area: b
+        font-weight: 400
 
 .weDo
     border-top: solid 1px #cfcfcf
@@ -84,8 +71,9 @@ main
             font-size: 35px
             margin: 20px 0
         p
-            font-size: 19px
+            font-size: 22px
             line-height: 25px
+            font-weight: 400
             margin: 0
 .theTeam
     display: grid
@@ -104,7 +92,7 @@ main
         width: 100%
         max-width: 700px
         font-size: 30px
-        font-family: 'roboto light'
+        // font-family: 'roboto light'
         font-weight: 400
         margin: 15px 0
 
@@ -123,7 +111,7 @@ main
             font-size: 30px
             margin-bottom: 10px
         h2
-            font-family: 'roboto light'
+            // font-family: 'roboto light'
             font-size: 22px
             margin: 0 
 
@@ -133,7 +121,7 @@ video
 
 #review
     margin: 50px 0
-    background-color: $SecondaryColor
+    background-color: $ThirdColor
     display: flex
     justify-content: space-around
     align-items: center
@@ -149,9 +137,7 @@ video
         &:hover
             cursor: pointer
         img
-            transition: 0.5s
-            &:hover
-                filter: invert(99%) sepia(5%) saturate(351%) hue-rotate(337deg) brightness(98%) contrast(92%)
+            filter: invert(99%) sepia(5%) saturate(351%) hue-rotate(337deg) brightness(98%) contrast(92%)
             width: 100%
 .btn-container
     display: flex
@@ -176,7 +162,7 @@ video
         color: $MainColor
         font-size: 2.5em
     p
-        font-family: "roboto light"
+        // font-family: "roboto light"
         font-weight: 200
         color: $MainColor
         font-size: 1.4em
@@ -233,7 +219,7 @@ video
             margin: 8px 0
             h2
                 font-size: 25px
-                letter-spacing: 15px
+                letter-spacing: 3px
                 margin: 10px 0
             p
                 font-size: 17px

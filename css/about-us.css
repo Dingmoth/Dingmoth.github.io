@@ -10,9 +10,13 @@
   font-family: "josefinSans";
   src: url("../fonts/JosefinSans-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "LeagueSpartanEL";
+  src: url("../fonts/LeagueSpartan-Light.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
-  font-family: "roboto";
+  font-family: "LeagueSpartanEL";
   background-color: rgba(0, 0, 0, 0);
   color: #000000;
 }
@@ -92,7 +96,7 @@ nav {
 }
 .holder a {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 32px;
   color: black;
 }
 .holder ul {
@@ -275,7 +279,7 @@ footer {
 }
 .last-message section p {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .last-message section div {
   display: flex;
@@ -285,8 +289,8 @@ footer {
 .last-message section a {
   text-align: right;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 20px;
 }
 .last-message section a:hover {
   text-decoration: underline;
@@ -323,14 +327,6 @@ footer {
     width: 40%;
   }
 }
-h1, h3 {
-  font-family: "josefinSans";
-}
-
-h2, p {
-  font-family: "roboto light";
-}
-
 p {
   font-weight: 600;
 }
@@ -341,23 +337,6 @@ div {
 
 main {
   padding: 0 200px;
-}
-
-.blogs {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 200px;
-}
-.blogs div {
-  width: 300px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.blogs div a {
-  font-family: "roboto light";
-  font-weight: 600;
-  text-decoration: none;
 }
 
 .entry h1 {
@@ -388,8 +367,9 @@ main {
   grid-area: a;
 }
 .introduction p {
-  font-size: 20px;
+  font-size: 28px;
   grid-area: b;
+  font-weight: 400;
 }
 
 .weDo {
@@ -422,8 +402,9 @@ main {
   margin: 20px 0;
 }
 .weDoContainer div p {
-  font-size: 19px;
+  font-size: 22px;
   line-height: 25px;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -446,7 +427,6 @@ main {
   width: 100%;
   max-width: 700px;
   font-size: 30px;
-  font-family: "roboto light";
   font-weight: 400;
   margin: 15px 0;
 }
@@ -472,7 +452,6 @@ main {
   margin-bottom: 10px;
 }
 .theLead div h2 {
-  font-family: "roboto light";
   font-size: 22px;
   margin: 0;
 }
@@ -485,7 +464,7 @@ video {
 
 #review {
   margin: 50px 0;
-  background-color: #007d5a;
+  background-color: #000000;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -504,11 +483,8 @@ video {
   cursor: pointer;
 }
 #review button img {
-  transition: 0.5s;
-  width: 100%;
-}
-#review button img:hover {
   filter: invert(99%) sepia(5%) saturate(351%) hue-rotate(337deg) brightness(98%) contrast(92%);
+  width: 100%;
 }
 
 .btn-container {
@@ -538,7 +514,6 @@ video {
   font-size: 2.5em;
 }
 .review-slide p {
-  font-family: "roboto light";
   font-weight: 200;
   color: #ffffff;
   font-size: 1.4em;
@@ -613,7 +588,7 @@ video {
   }
   .weDoContainer div h2 {
     font-size: 25px;
-    letter-spacing: 15px;
+    letter-spacing: 3px;
     margin: 10px 0;
   }
   .weDoContainer div p {

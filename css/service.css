@@ -10,9 +10,13 @@
   font-family: "josefinSans";
   src: url("../fonts/JosefinSans-Medium.ttf") format("truetype");
 }
+@font-face {
+  font-family: "LeagueSpartanEL";
+  src: url("../fonts/LeagueSpartan-Light.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
-  font-family: "roboto";
+  font-family: "LeagueSpartanEL";
   background-color: rgba(0, 0, 0, 0);
   color: #000000;
 }
@@ -92,7 +96,7 @@ nav {
 }
 .holder a {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 32px;
   color: black;
 }
 .holder ul {
@@ -275,7 +279,7 @@ footer {
 }
 .last-message section p {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .last-message section div {
   display: flex;
@@ -285,8 +289,8 @@ footer {
 .last-message section a {
   text-align: right;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 20px;
 }
 .last-message section a:hover {
   text-decoration: underline;
