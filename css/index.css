@@ -97,7 +97,6 @@ nav {
 .holder a {
   text-decoration: none;
   font-size: 32px;
-  color: black;
 }
 .holder ul {
   margin: auto 0;
@@ -113,6 +112,16 @@ nav {
 }
 .holder ul li i {
   margin: 0 10px;
+}
+
+#en img {
+  height: 20px;
+  width: 32px;
+}
+
+#lt img {
+  height: 20px;
+  width: 32px;
 }
 
 .blackbar {
@@ -156,108 +165,6 @@ nav {
     width: 100%;
   }
 }
-.contact-us {
-  padding: 4vw 15vw 4vw 15vw;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-content: center;
-}
-
-.contact-info {
-  width: 50%;
-}
-.contact-info h1 {
-  font-size: 1.8em;
-}
-.contact-info p {
-  padding: 0 10px 0 10px;
-  font-size: 1.2em;
-}
-.contact-info h2 {
-  font-size: 1.5em;
-  color: #000000;
-  font-style: italic;
-}
-
-.contact-form {
-  border-radius: 15px;
-  padding: 30px 10px 80px 10px;
-  width: 50%;
-  height: auto;
-  position: relative;
-}
-
-.fill-in {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.inputForms {
-  border: 1px solid #007d5a;
-  border-radius: 5px;
-  font-size: 1.3em;
-  width: 45%;
-  height: 50px;
-  margin: 5px 10px 5px 10px;
-}
-
-.inputs {
-  text-align: left;
-  padding: 0 20px 0 20px;
-}
-.inputs label {
-  font-size: 1.1em;
-}
-.inputs label a {
-  color: #007d5a;
-}
-
-form {
-  text-align: center;
-}
-
-input[type=submit] {
-  width: 100px;
-  height: 30px;
-  background-color: #007d5a;
-  border: none;
-  border-radius: 15px;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  transition: 0.3s;
-}
-input[type=submit]:hover {
-  background-color: #007d5a;
-  color: #000000;
-}
-
-@media screen and (max-width: 1500px) {
-  .contact-info {
-    width: 100%;
-  }
-  .contact-us {
-    padding: 4vw 8vw 4vw 8vw;
-    flex-direction: column;
-    padding: 15px;
-  }
-  .contact-form {
-    width: 100%;
-    min-width: none;
-    padding-bottom: 80px;
-  }
-  .inputForms {
-    width: 80%;
-    margin: 5px 0;
-  }
-  input[type=submit] {
-    bottom: 2%;
-  }
-}
 footer {
   bottom: 0;
   display: flex;
@@ -268,9 +175,8 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 20%;
-  padding: 20px 50px;
+  padding: 70px 50px 20px 50px;
   font-size: 1.2em;
-  margin-top: 50px;
 }
 .last-message section {
   display: flex;

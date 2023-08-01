@@ -128,3 +128,20 @@ function cursor(e){
     mouseCursor.style.left = "calc(" +e.clientX + "px - 1rem)";
 }
 
+let vid = document.querySelector("video");
+let ytLink = document.getElementById("youtubeLink");
+
+const changeLanguage = () => {
+    if (language === 'lt'){
+        ytLink.href = "https://www.youtube.com/watch?v=YejE9UHrgto&ab_channel=AmniumDigital"
+        vid.src = "/img/LT versija.mp4"; 
+    } else {
+        ytLink.href = "https://www.youtube.com/watch?v=gBFSBts7xYA&ab_channel=AmniumDigital"
+        vid.src = "/img/EN VERSIJA.mp4";
+    }
+}
+
+if (sessionStorage.getItem('lang') == 'LT') {
+    language = 'lt';
+    changeLanguage();
+};

@@ -11,8 +11,6 @@ const carousel = (elementCarousel) => {
 
     const elementCarouselSlider = el(".review-slider", elementCarousel);
     const elementsSlides = els(".review-slide", elementCarouselSlider);
-    console.log(elementCarouselSlider);
-    console.log(elementsSlides);
     
 
     let total = elementsSlides.length;
@@ -74,7 +72,6 @@ const carousel = (elementCarousel) => {
 
 
     elementCarouselSlider.addEventListener("transitionend", () => {
-        console.log("active");
         if (c <= -1) c = total - 1;
         if (c >= total) c = 0;
         anim(0); // quickly switch to "c" slide (with animation duration 0)
@@ -90,5 +87,4 @@ const carousel = (elementCarousel) => {
 };
 
 const review = document.querySelector('.review');
-console.log(review);
 carousel(review);
