@@ -1,0 +1,67 @@
+@import 'basic'
+
+.borderLine
+    display: flex
+    place-content: center
+    width: 100%
+    padding: 70px 0
+    span
+        padding: 0
+        width: 100%
+        border-bottom: solid 1px #cfcfcf
+
+.long
+    padding: 0
+    span
+        width:95%
+
+.venturesHeader
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 200px
+    letter-spacing: 3px
+    img
+        width: 60px
+
+
+main
+    padding: 10vw   
+    padding-bottom: 70px 
+
+.articleHeadline
+    display: flex
+    gap: 25px
+    img
+        min-width: 450px 
+        width: 40vw
+
+
+.ventureTitle
+    margin: 0
+    font-size: 38px
+.ventureText
+    font-size: 26px
+
+@media screen and (max-width: 1000px)
+    main
+        padding: 100px 0 70px 0  
+    .ventureTitle
+        font-size: 32px
+    .ventureText
+        font-size: 22px
+    .articleHeadline
+        img
+            min-width: 350px 
+
+@media screen and (max-width: 750px)
+    main
+        padding: 100px 10px 70px 10px 
+    .articleHeadline
+        flex-direction: column
+        img
+            min-width: none
+            width: 100%
+        div
+            padding: 17px

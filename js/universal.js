@@ -64,9 +64,6 @@ nightMode.addEventListener("click", function(){
         whiteWords.forEach(elem => {
             elem.style.color = '#ffffff';
         });
-        // for(let i=0;i<colors.length;i++){
-        //     colors[i].style.color = '#000000';
-        // };
         document.querySelector('body').style.backgroundColor = '#ffffff';
         document.querySelector('#dropdown').style.backgroundColor = '#ffffff';
     } else {
@@ -74,9 +71,6 @@ nightMode.addEventListener("click", function(){
         colors.forEach(elem => {
             elem.style.color = '#ffffff';
         });
-        // for(let i=0;i<colors.length;i++){
-        //     colors[i].style.color = '#ffffff';
-        //   }
         document.querySelector('body').style.backgroundColor = '#000000'
         document.querySelector('#dropdown').style.backgroundColor = '#000000'
     }

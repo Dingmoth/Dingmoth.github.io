@@ -24,9 +24,9 @@
 
 
 main
-    padding: 150px    
+    padding: 8vw    
 
-.articeHeadline
+.articleHeadline
     position: relative
     display: grid
     grid-template-columns: 90% 10%
@@ -61,15 +61,56 @@ main
 
         
 .dateAndSource
-    font-size: 18px
-.headline
-    font-size: 25px
+    font-size: 22px
     z-index: 2
 
-// *
-//     color: $MainColor
-// body
-//     background-color: $ThirdColor
+.headline
+    font-size: 28px
+    z-index: 2
+ 
 
-// #dropdown
-//     background-color: $ThirdColor  
+@media screen and (max-width: 1000px)
+    main
+        padding: 5px  
+    .articleHeadline
+        grid-template-columns: 70% 30%
+        grid-template-rows: 300px
+        img
+            scale: 0.7
+            opacity: 1
+        &:hover > img
+            scale: 0.7
+        a
+            opacity: 1
+@media screen and (max-width: 800px)
+    main
+        padding: 5px  
+    .articleHeadline
+        grid-template-columns: 65% 35%
+        grid-template-rows: 300px
+        img
+            right: -5%
+        a
+            right: 10%
+        .dateAndSource
+            font-size: 18px
+            margin: 0
+        .headline
+            font-size: 20px
+            
+@media screen and (max-width: 600px)
+    main
+        padding: 5px  
+    .articleHeadline
+        grid-template-columns: 100% 0%
+        grid-template-rows: 300px
+        img
+            scale: 0.5
+            opacity: 1
+            right: -30%
+            top: 20%
+        &:hover > img
+            scale: 0.5
+        a
+            top: 80%
+            right: 10%

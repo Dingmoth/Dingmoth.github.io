@@ -237,6 +237,7 @@ footer {
   display: flex;
   place-content: center;
   width: 100%;
+  padding: 70px 0;
 }
 .borderLine span {
   padding: 0;
@@ -244,7 +245,14 @@ footer {
   border-bottom: solid 1px #cfcfcf;
 }
 
-.newsHeader {
+.long {
+  padding: 0;
+}
+.long span {
+  width: 95%;
+}
+
+.venturesHeader {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -252,123 +260,59 @@ footer {
   padding-top: 200px;
   letter-spacing: 3px;
 }
-.newsHeader img {
+.venturesHeader img {
   width: 60px;
 }
 
 main {
-  padding: 8vw;
+  padding: 10vw;
+  padding-bottom: 70px;
 }
 
 .articleHeadline {
-  position: relative;
-  display: grid;
-  grid-template-columns: 90% 10%;
-  grid-template-rows: 300px;
-}
-.articleHeadline div {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.articleHeadline a {
-  font-size: 18px;
-  position: absolute;
-  right: 4%;
-  top: 65%;
-  text-decoration: none;
-  transition: 0.5s;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
+  gap: 25px;
 }
 .articleHeadline img {
-  position: absolute;
-  grid-area: b;
-  transition: 0.5s;
-  opacity: 0;
-  z-index: 1;
-  right: 0%;
-  top: 0%;
-}
-.articleHeadline:hover > img {
-  scale: 0.9;
-  opacity: 0.6;
-}
-.articleHeadline:hover > a {
-  opacity: 1;
+  min-width: 450px;
+  width: 40vw;
 }
 
-.dateAndSource {
-  font-size: 22px;
-  z-index: 2;
+.ventureTitle {
+  margin: 0;
+  font-size: 38px;
 }
 
-.headline {
-  font-size: 28px;
-  z-index: 2;
+.ventureText {
+  font-size: 26px;
 }
 
 @media screen and (max-width: 1000px) {
   main {
-    padding: 5px;
+    padding: 100px 0 70px 0;
   }
-  .articleHeadline {
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 300px;
+  .ventureTitle {
+    font-size: 32px;
+  }
+  .ventureText {
+    font-size: 22px;
   }
   .articleHeadline img {
-    scale: 0.7;
-    opacity: 1;
-  }
-  .articleHeadline:hover > img {
-    scale: 0.7;
-  }
-  .articleHeadline a {
-    opacity: 1;
+    min-width: 350px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
   main {
-    padding: 5px;
+    padding: 100px 10px 70px 10px;
   }
   .articleHeadline {
-    grid-template-columns: 65% 35%;
-    grid-template-rows: 300px;
+    flex-direction: column;
   }
   .articleHeadline img {
-    right: -5%;
+    min-width: none;
+    width: 100%;
   }
-  .articleHeadline a {
-    right: 10%;
+  .articleHeadline div {
+    padding: 17px;
   }
-  .articleHeadline .dateAndSource {
-    font-size: 18px;
-    margin: 0;
-  }
-  .articleHeadline .headline {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 600px) {
-  main {
-    padding: 5px;
-  }
-  .articleHeadline {
-    grid-template-columns: 100% 0%;
-    grid-template-rows: 300px;
-  }
-  .articleHeadline img {
-    scale: 0.5;
-    opacity: 1;
-    right: -30%;
-    top: 20%;
-  }
-  .articleHeadline:hover > img {
-    scale: 0.5;
-  }
-  .articleHeadline a {
-    top: 80%;
-    right: 10%;
-  }
-}/*# sourceMappingURL=news.css.map */
+}/*# sourceMappingURL=ventures.css.map */
