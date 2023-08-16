@@ -11,12 +11,11 @@
         border-bottom: solid 1px #cfcfcf
 
 .long
-    padding: 0
     span
         width:95%
 
 main
-    padding: 10vw   
+    padding: 5vw   
     padding-bottom: 70px 
 
 .partnersHeader
@@ -28,3 +27,42 @@ main
     letter-spacing: 3px
     img
         width: 60px
+
+.partnerContainer
+    display: flex
+    justify-content: space-evenly
+    gap: 50px
+    
+.partner
+    max-width: 650px
+    width: 50vw
+    img
+        width: 100%
+    p
+        font-size: 20px
+.first
+    text-align: right
+.seperator
+    padding: 0
+    display: none
+@media screen and (max-width: 1000px)
+    main
+        padding: 15px
+    .partnerContainer
+        flex-direction: column
+    .partner
+        max-width: none
+        width: 100%
+    .seperator
+        display: flex
+@media screen and (max-width: 600px)
+    main
+        margin-top: 60px
+        padding: 0
+    .partner
+        text-align: center
+        h1
+            margin: 10px
+            font-size: 26px
+        p
+            margin: 10px

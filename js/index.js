@@ -35,7 +35,6 @@ function shouldItPlay() {
     } else {
         const vodoo = document.querySelectorAll('.voodoo');
         const links = document.querySelectorAll('a');
-        console.log('it works!');
         const bm = document.getElementById('cover');
         document.querySelector('body').classList.remove('hiden');
         bm.style.display = 'none';
@@ -61,7 +60,7 @@ const specialtiesShown = document.querySelectorAll(".specialtiesShown");
 
 
 const showSpecialties = function (i, vert) {
-    if (specialtiesShown[i].offsetHeight >= 200) {
+    if (specialtiesShown[i].offsetHeight >= 100) {
         specialtiesShown[i].style.height = "0px";
         specialties[i].querySelector("i").style.transform = "rotate(-180deg)";
     } else {
@@ -80,28 +79,28 @@ specialties[0].addEventListener("click", function() {
     if ($(window).width() < 550) {
         showSpecialties(0, 270);
     }   else {
-    showSpecialties(0, 170);
+    showSpecialties(0, 215);
     }
 });
 specialties[1].addEventListener("click", function() {
     if ($(window).width() < 550) {
         showSpecialties(1, 370);
     }   else {
-    showSpecialties(1, 220);
+    showSpecialties(1, 300);
     }
 });
 specialties[2].addEventListener("click", function() {
     if ($(window).width() < 550) {
         showSpecialties(2, 418);
     }   else {
-    showSpecialties(2, 280);
+    showSpecialties(2, 325);
     }
 });
 specialties[3].addEventListener("click", function() {
     if ($(window).width() < 550) {
         showSpecialties(3, 490);
     }   else {
-    showSpecialties(3, 290);
+    showSpecialties(3, 380);
     }
 });
 
@@ -131,17 +130,34 @@ function cursor(e){
 let vid = document.querySelector("video");
 let ytLink = document.getElementById("youtubeLink");
 
+async function fullLanguageChange() {
+    let requestURL = `https://dingmoth.github.io/languages/index${language}.json`;
+    let request = new Request(requestURL);
+    let response = await fetch(request);
+    let slogan = await response.json();
+    let sloganLength = Object.keys(slogan);
+    let index = 0;
+
+
+    sloganLength.forEach((element) => {
+        document.getElementsByClassName("testerLanguage")[index].innerHTML = slogan[element];
+        index++;
+    })
+}
+
 const changeLanguage = () => {
-    if (language === 'lt'){
+    if (language === 'LT'){
         ytLink.href = "https://www.youtube.com/watch?v=YejE9UHrgto&ab_channel=AmniumDigital"
-        vid.src = "/img/LT versija.mp4"; 
+        vid.src = "/img/LT versija.mp4";
+        fullLanguageChange()
     } else {
         ytLink.href = "https://www.youtube.com/watch?v=gBFSBts7xYA&ab_channel=AmniumDigital"
         vid.src = "/img/EN VERSIJA.mp4";
+        fullLanguageChange()
     }
 }
 
 if (sessionStorage.getItem('lang') == 'LT') {
-    language = 'lt';
+    language = 'LT';
     changeLanguage();
 };
