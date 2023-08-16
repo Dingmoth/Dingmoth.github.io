@@ -131,7 +131,7 @@ let vid = document.querySelector("video");
 let ytLink = document.getElementById("youtubeLink");
 
 async function fullLanguageChange() {
-    let requestURL = `https://github.com/Dingmoth/Dingmoth.github.io/blob/master/languages/index${language}.json`;
+    let requestURL = `https://raw.githubusercontent.com/Dingmoth/Dingmoth.github.io/master/languages/index${language}.json`;
     let request = new Request(requestURL);
     let response = await fetch(request);
     let slogan = await response.json();
