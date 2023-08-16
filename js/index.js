@@ -131,7 +131,7 @@ let vid = document.querySelector("video");
 let ytLink = document.getElementById("youtubeLink");
 
 async function fullLanguageChange() {
-    let requestURL = `https://dingmoth.github.io/languages/index${language}.json`;
+    let requestURL = `https://github.com/Dingmoth/Dingmoth.github.io/blob/master/languages/index${language}.json`;
     let request = new Request(requestURL);
     let response = await fetch(request);
     let slogan = await response.json();
@@ -150,10 +150,12 @@ const changeLanguage = () => {
         ytLink.href = "https://www.youtube.com/watch?v=YejE9UHrgto&ab_channel=AmniumDigital"
         vid.src = "/img/LT versija.mp4";
         fullLanguageChange()
+        document.getElementById("mousePlay").innerHTML = "PRADĖTI";
     } else {
         ytLink.href = "https://www.youtube.com/watch?v=gBFSBts7xYA&ab_channel=AmniumDigital"
         vid.src = "/img/EN VERSIJA.mp4";
         fullLanguageChange()
+        document.getElementById("mousePlay").innerHTML = "PLAY";
     }
 }
 
