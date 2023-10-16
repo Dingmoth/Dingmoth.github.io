@@ -18,12 +18,12 @@
   box-sizing: border-box;
   font-family: "LeagueSpartanEL";
   background-color: rgba(0, 0, 0, 0);
-  color: #000000;
+  color: #ffffff;
 }
 
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 nav {
@@ -35,6 +35,9 @@ nav {
   align-items: center;
   height: 84px;
   z-index: 8;
+}
+nav a {
+  z-index: 9;
 }
 
 .no-margin {
@@ -78,7 +81,7 @@ nav {
   transition: all 0.7s cubic-bezier(0.16, 1, 0.5, 1);
   transform: translateY(-110%);
   visibility: hidden;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 .dropdown button {
   border: none;
@@ -260,8 +263,8 @@ footer {
 .background button {
   font-size: x-large;
   font-weight: 600;
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
   border: none;
   width: auto;
   height: 45px;
@@ -301,13 +304,13 @@ footer {
   padding: 2vw 0;
 }
 .canRelateCont h1 {
-  color: #ffffff;
+  color: #000000;
   font-size: 40px;
   margin: 0;
   padding-left: 12px;
 }
 .canRelateCont h1 span {
-  color: #000000;
+  color: #ffffff;
 }
 .canRelateCont ul {
   padding-right: 30px;
@@ -316,7 +319,7 @@ footer {
 .canRelateCont li {
   font-size: 20px;
   padding: 0 0 5px 0;
-  color: #ffffff;
+  color: #000000;
   list-style-image: url("../img/icons/arrow.png");
 }
 .canRelateCont div {
@@ -375,7 +378,7 @@ footer {
 }
 .theBenefits li {
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
   list-style: none;
   text-align: left;
   margin: 5px 0;
@@ -414,8 +417,8 @@ footer {
 .background3 button {
   font-size: x-large;
   font-weight: 600;
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
   border: none;
   width: auto;
   height: 45px;
@@ -466,10 +469,10 @@ footer {
   text-decoration: none;
 }
 .serviceBox h2 {
-  color: #ffffff;
+  color: #000000;
 }
 .serviceBox p {
-  color: #ffffff;
+  color: #000000;
   font-size: 1.2em;
 }
 
@@ -529,7 +532,7 @@ footer {
 }
 .theProcess li {
   font-size: 20px;
-  color: #000000;
+  color: #ffffff;
   text-align: left;
   margin: 10px 0;
   font-weight: 500;

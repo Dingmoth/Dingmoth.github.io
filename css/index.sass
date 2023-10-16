@@ -56,7 +56,7 @@
 
 
 #mousePlay
-    background-color: $ThirdColor
+    background-color: $MainColor
     border-radius: 50%
     width: 90px
     height: 90px
@@ -69,7 +69,7 @@
     text-align: center
     h2
         margin: 30% 0
-        color: $MainColor
+        color: $ThirdColor
 
 
 
@@ -92,7 +92,7 @@ video
     place-content: center
     margin: 15px
     a
-        border: solid 2px $ThirdColor
+        border: solid 2px $MainColor
         padding: 5px 10px
         border-radius: 15px
         text-decoration: none
@@ -118,6 +118,7 @@ video
 .articleSpecHolder
     display: flex
     justify-content: center
+    padding-top: 100px
 .specialtiesContainer
     display: flex
     justify-content: center
@@ -149,7 +150,7 @@ video
 
 .talk
     height: 385px
-    background-color: $ThirdColor
+    background-color: $MainColor
     display: grid
     grid-template-columns: 1fr 1fr
     justify-items: center
@@ -157,23 +158,23 @@ video
     padding: 0 15vw
     margin-top: 55px
     h1
-        color: $MainColor
+        color: $ThirdColor
         font-size: 60px
         line-height: 73px
     div
         width: 400px
         text-align: center
         p
-            color: $MainColor
+            color: $ThirdColor
             font-size: 22px
             line-height: 48px
         button
             height: 66px
             width: 335px
-            color: $MainColor
+            color: $ThirdColor
             font-size: 23px
             line-height: 33px
-            border: 2px solid $MainColor
+            border: 2px solid $ThirdColor
             transition: 0.5s
             &:hover
                 color: $MainColor
@@ -186,15 +187,13 @@ video
     margin: 20px 15%
     text-align: center
     h3
-        // font-family: "roboto light"
         font-weight: 600
         font-size: 24px
         margin: 18px 0
     p
-        // font-family: "roboto light"
         font-size: 20px
         // font-weight: 400
-        color: #212529
+        color: $ThirdColor
     section
         display: flex
         place-content: center
@@ -220,7 +219,7 @@ video
         // font-weight: 100
         font-size: 28px
         margin: 15px 20%
-        color: #212529
+        color: $ThirdColor
 
 
 
@@ -352,3 +351,21 @@ video
                 margin-top: 0
                 font-size: 17px
                 line-height: 20px
+
+
+#languageSelect
+    border: none
+    border-radius: 10px
+    padding: 6px
+    font-size: 18px
+    margin-bottom: 4px
+    background-color: $MainColor
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    text-align: center
+    width: 80px
+    height: 30px
+    &:active, &:focus 
+        outline: none
+        box-shadow: none

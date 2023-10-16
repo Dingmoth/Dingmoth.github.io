@@ -16,24 +16,15 @@ dropdownBtn.addEventListener("click", function (e) {
 
 
 let language = '';
-// let vid = document.querySelector("video");
-// let ytLink = document.getElementById("youtubeLink");
 
 const ltButton = document.getElementById("lt");
 const enButton = document.getElementById("en");
 
-
-ltButton.addEventListener("click", function(){
-    language = 'LT';
-    sessionStorage.setItem('lang', 'LT');
+function langSwitch(selectedValue){
+    let language = selectedValue.value;
+    sessionStorage.setItem('lang', `${language}`);
     changeLanguage();
-});
-enButton.addEventListener("click", function(){
-    language = 'EN';
-    sessionStorage.setItem('lang', 'EN');
-    changeLanguage();
-});
-
+};
 
 let whiteWords = document.querySelectorAll('.stayWhite');
 
@@ -41,8 +32,18 @@ let whiteWords = document.querySelectorAll('.stayWhite');
 let nightMode = document.getElementById('nightMode');
 let colors = document.querySelectorAll('*');
 nightMode.addEventListener("click", function(){
-    if (sessionStorage.getItem('nightMode') == 'True') {
-        sessionStorage.setItem('nightMode', 'False');
+    if (sessionStorage.getItem('nightMode') === 'false') {
+        sessionStorage.setItem('nightMode', 'true');
+        colors.forEach(elem => {
+            elem.style.color = '#ffffff';
+        });
+        document.querySelector('body').style.backgroundColor = '#000000';
+        document.querySelector('#dropdown').style.backgroundColor = '#000000';
+        document.querySelector('.logo').src = "/img/AmniumDarkMode.png";
+        document.querySelector('.annoying').src = "/img/AmniumDarkMode.png";
+        document.querySelector('select').style.backgroundColor = '#000000';
+    } else {
+        sessionStorage.setItem('nightMode', 'false');
         colors.forEach(elem => {
             elem.style.color = '#000000';
         });
@@ -51,23 +52,24 @@ nightMode.addEventListener("click", function(){
         });
         document.querySelector('body').style.backgroundColor = '#ffffff';
         document.querySelector('#dropdown').style.backgroundColor = '#ffffff';
-    } else {
-        sessionStorage.setItem('nightMode', 'True');
-        colors.forEach(elem => {
-            elem.style.color = '#ffffff';
-        });
-        document.querySelector('body').style.backgroundColor = '#000000'
-        document.querySelector('#dropdown').style.backgroundColor = '#000000'
+        document.querySelector('.logo').src = "/img/amnium_logo.png";
+        document.querySelector('.annoying').src = "/img/amnium_logo.png";
+        document.querySelector('select').style.backgroundColor = '#ffffff';
     }
 });
 
-if (sessionStorage.getItem('nightMode') == 'True') {
-    sessionStorage.setItem('nightMode', 'True');
+if (sessionStorage.getItem('nightMode') === 'false') {
         colors.forEach(elem => {
+            elem.style.color = '#000000';
+        });
+        whiteWords.forEach(elem => {
             elem.style.color = '#ffffff';
         });
-        document.querySelector('body').style.backgroundColor = '#000000'
-        document.querySelector('#dropdown').style.backgroundColor = '#000000'
+        document.querySelector('body').style.backgroundColor = '#ffffff'
+        document.querySelector('#dropdown').style.backgroundColor = '#ffffff'
+        document.querySelector('.logo').src = "/img/amnium_logo.png";
+        document.querySelector('.annoying').src = "/img/amnium_logo.png";
+        document.querySelector('select').style.backgroundColor = '#ffffff';
 }
 
 

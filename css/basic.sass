@@ -18,9 +18,9 @@
 
 
 
-$MainColor: #ffffff
+$MainColor: #000000
 $SecondaryColor: #007d5a
-$ThirdColor: #000000
+$ThirdColor: #ffffff
 $emphasis: #cfd13800
 *
     box-sizing: border-box
@@ -40,6 +40,8 @@ nav
     align-items: center
     height: 84px
     z-index: 8
+    a
+        z-index: 9
 
 .no-margin
     margin: 0    
@@ -119,7 +121,7 @@ nav
 .blackbar
     height: 10%
     width: 100%
-    background-color: $ThirdColor
+    background-color: $MainColor
 
 .show 
     transform: translateY(0rem)

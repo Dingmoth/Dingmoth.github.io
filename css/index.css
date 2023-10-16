@@ -18,12 +18,12 @@
   box-sizing: border-box;
   font-family: "LeagueSpartanEL";
   background-color: rgba(0, 0, 0, 0);
-  color: #000000;
+  color: #ffffff;
 }
 
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 nav {
@@ -35,6 +35,9 @@ nav {
   align-items: center;
   height: 84px;
   z-index: 8;
+}
+nav a {
+  z-index: 9;
 }
 
 .no-margin {
@@ -78,7 +81,7 @@ nav {
   transition: all 0.7s cubic-bezier(0.16, 1, 0.5, 1);
   transform: translateY(-110%);
   visibility: hidden;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 .dropdown button {
   border: none;
@@ -370,6 +373,7 @@ video {
 .articleSpecHolder {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .specialtiesContainer {
@@ -440,8 +444,8 @@ video {
   transition: 0.5s;
 }
 .talk div button:hover {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
@@ -457,7 +461,7 @@ video {
 }
 .howWeWork p {
   font-size: 20px;
-  color: #212529;
+  color: #ffffff;
 }
 .howWeWork section {
   display: flex;
@@ -489,7 +493,7 @@ video {
 .howWeWorkTitle p {
   font-size: 28px;
   margin: 15px 20%;
-  color: #212529;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1200px) {
@@ -644,4 +648,22 @@ video {
     font-size: 17px;
     line-height: 20px;
   }
+}
+#languageSelect {
+  border: none;
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 18px;
+  margin-bottom: 4px;
+  background-color: #000000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+}
+#languageSelect:active, #languageSelect:focus {
+  outline: none;
+  box-shadow: none;
 }/*# sourceMappingURL=index.css.map */

@@ -11,7 +11,7 @@
 <body class="hiden">
     
     <nav class="voodoo">
-        <img class="logo" src="/img/amnium_logo.png" alt="AmniumDigital_logo">
+        <img class="logo" src="/img/AmniumDarkMode.png" alt="AmniumDigital_logo">
         <button class="btn" id="btn">
             <i class="fa-solid fa-bars fa-3x"></i>
         </button>
@@ -26,8 +26,10 @@
                     <li><a href="https://www.instagram.com/amniumdigital/" target="_blank"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/profile.php?id=100086460657839" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                 </ul>
             </div>
-            <button id="en"><img src="/img/icons/EN.png"></button>
-            <button id="lt"><img src="/img/icons/LT.png"></button>
+            <select id="languageSelect" onchange="langSwitch(this)">
+                <option value="LT">Lietuvių<img src="/img/icons/LT.png"></option>
+                <option value="EN">English<img src="/img/icons/EN.png"></option>
+            </select>
             <button id="nightMode"><i class="fa-solid fa-moon fa-2x"></i></button>
             <div class="blackbar"></div>
         </div>
@@ -35,13 +37,13 @@
     <div id="cover"></div>
     <main class="voodoo">
         <article class="intro">
-            <div><img src="/img/weareamnium black letters.png"></div>
+            <div><img id="weAreAmnium" src="/img/weAreAmniumDarkMode.png"></div>
             <section>
                 <h1 class="testerLanguage">FOR OUR PEOPLE. <br>FOR OUR CLIENTS. <br>FOR OUR FUTURE.</h1>
                 <p class="testerLanguage">We're a fullstack digital agency, which means we can provide a wide range of services to help you grow your business. Our team has expertise in all areas of the digital world, so you don't have to coordinate between multiple companies. This way, you get a high quality service without having to worry about anything.<a href='about-us.html'><img src='/img/icons/arrow yellow.png' alt='yello arrow'></a></p>
             </section>
         </article>
-            <div id="mousePlay"><h2 class="stayWhite">PLAY</h2></div>
+            <div id="mousePlay"><h2 id="playButton" class="stayWhite">PLAY</h2></div>
             <div class="video">            
                 <button id="moveDown" class="testerLanguage">Scroll to explore</button>
                 <a id="youtubeLink" href="https://www.youtube.com/watch?v=gBFSBts7xYA&ab_channel=AmniumDigital" target="_blank"><video autoplay loop muted playsinline>
@@ -77,24 +79,24 @@
             <section>
                 <div class="howWeWorkDivHold">
                     <div>
-                        <img src="/img/icons/analytics.gif">
+                        <img src="/img/icons/analyticsDarkMode.gif" id="howWeWorkGif1">
                         <h3 class="testerLanguage">NURTURING</h3>
                         <p class="testerLanguage">We assist you in establishing an automated system that effectively nurtures your leads, transforming your website into a smoothly operating sales powerhouse.</p>
                     </div>
                     <div>
-                        <img src="/img/icons/category.gif">
+                        <img src="/img/icons/categoryDarkMode.gif" id="howWeWorkGif2">
                         <h3 class="testerLanguage">CONVERSION</h3>
                         <p class="testerLanguage">We enhance the conversion rate of visitors to buyers by implementing exclusive strategies that enable our clients to double or even triple their sales.</p>
                     </div>
                 </div>
                 <div class="howWeWorkDivHold">
                     <div>
-                        <img src="/img/icons/autorenew.gif">
+                        <img src="/img/icons/autorenewDarkMode.gif" id="howWeWorkGif3">
                         <h3 class="testerLanguage">TRAFFIC GENERATION</h3>
                         <p class="testerLanguage">We consistently direct a continuous flow of exceptionally qualified customers, actively seeking products/services, to your website using both paid and organic traffic channels.</p>
                     </div>
                     <div>
-                        <img src="/img/icons/share.gif">
+                        <img src="/img/icons/shareDarkMode.gif" id="howWeWorkGif4">
                         <h3 class="testerLanguage">RETARGETING</h3>
                         <p class="testerLanguage">Visitors who do not convert will be effectively retargeted with engaging and timely advertisements that will accompany them throughout their internet browsing experience.</p>
                     </div>
@@ -129,7 +131,7 @@
             <div><a href=""><i class="fa-brands fa-facebook fa-xl"></i></a><a><i class="fa-brands fa-instagram fa-xl"></i></a></div>
         </section>
         <section>
-            <img src="/img/amnium_logo.png" class="annoying">
+            <img src="/img/AmniumDarkMode.png" class="annoying" id="logo">
             <a class="noCursor testerLanguage" href="/about-us.html">ABOUT</a>
             <a class="noCursor testerLanguage" href="">PARTNERS</a>
             <a class="noCursor testerLanguage" href="/ventures.html">VENTURES</a>
@@ -143,8 +145,8 @@
     <script src="https://kit.fontawesome.com/069df6d784.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/js/index.js"></script>
     <script src="/js/universal.js"></script>
+    <script src="/js/index.js"></script>
 
 </body>
 </html>

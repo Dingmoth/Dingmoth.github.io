@@ -9,6 +9,7 @@ function shouldItPlay() {
             loop: false,
             autoplay: true,
             path: '/js/amniumloading.json'
+
         })
 
         const vodoo = document.querySelectorAll('.voodoo');
@@ -131,6 +132,7 @@ let vid = document.querySelector("video");
 let ytLink = document.getElementById("youtubeLink");
 
 async function fullLanguageChange() {
+    let language = sessionStorage.getItem('lang');
     let requestURL = `https://raw.githubusercontent.com/Dingmoth/Dingmoth.github.io/master/languages/index${language}.json`;
     let request = new Request(requestURL);
     let response = await fetch(request);
@@ -146,16 +148,16 @@ async function fullLanguageChange() {
 }
 
 const changeLanguage = () => {
-    if (language === 'LT'){
+    if (sessionStorage.getItem('lang') == 'LT'){
         ytLink.href = "https://www.youtube.com/watch?v=YejE9UHrgto&ab_channel=AmniumDigital"
         vid.src = "/img/LT versija.mp4";
         fullLanguageChange()
-        document.getElementById("mousePlay").innerHTML = "PRADĖTI";
+        document.getElementById("playButton").innerHTML = "PRADĖTI";
     } else {
         ytLink.href = "https://www.youtube.com/watch?v=gBFSBts7xYA&ab_channel=AmniumDigital"
         vid.src = "/img/EN VERSIJA.mp4";
         fullLanguageChange()
-        document.getElementById("mousePlay").innerHTML = "PLAY";
+        document.getElementById("playButton").innerHTML = "PLAY";
     }
 }
 
@@ -163,3 +165,28 @@ if (sessionStorage.getItem('lang') == 'LT') {
     language = 'LT';
     changeLanguage();
 };
+function darkModeImages(){
+    if (sessionStorage.getItem('nightMode') === 'true'){
+        console.log("test1");
+        document.querySelector('#weAreAmnium').src = "/img/weAreAmniumDarkMode.png";
+        document.querySelector('#howWeWorkGif1').src = "/img/icons/analyticsDarkMode.gif";
+        document.querySelector('#howWeWorkGif2').src = "/img/icons/categoryDarkMode.gif";
+        document.querySelector('#howWeWorkGif3').src = "/img/icons/autorenewDarkMode.gif";
+        document.querySelector('#howWeWorkGif4').src = "/img/icons/shareDarkMode.gif";
+    } else if (sessionStorage.getItem('nightMode') === 'false') {
+        console.log("test2");
+        document.querySelector('#weAreAmnium').src = "/img/weareamnium black letters.png";
+        document.querySelector('#howWeWorkGif1').src = "/img/icons/analytics.gif";
+        document.querySelector('#howWeWorkGif2').src = "/img/icons/category.gif";
+        document.querySelector('#howWeWorkGif3').src = "/img/icons/autorenew.gif";
+        document.querySelector('#howWeWorkGif4').src = "/img/icons/share.gif";
+    }
+};
+darkModeImages();
+document.getElementById('nightMode').addEventListener("click", function(){
+    darkModeImages();
+    console.log("test3");
+});
+document.getElementById('moveDown').addEventListener("click", function(){
+    document.querySelector('.articleSpecHolder').scrollIntoView({ behavior: "smooth"}, { inline: "end"});
+});

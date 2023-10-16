@@ -18,12 +18,12 @@
   box-sizing: border-box;
   font-family: "LeagueSpartanEL";
   background-color: rgba(0, 0, 0, 0);
-  color: #000000;
+  color: #ffffff;
 }
 
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 nav {
@@ -35,6 +35,9 @@ nav {
   align-items: center;
   height: 84px;
   z-index: 8;
+}
+nav a {
+  z-index: 9;
 }
 
 .no-margin {
@@ -78,7 +81,7 @@ nav {
   transition: all 0.7s cubic-bezier(0.16, 1, 0.5, 1);
   transform: translateY(-110%);
   visibility: hidden;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 .dropdown button {
   border: none;
@@ -234,7 +237,7 @@ footer {
   }
 }
 header {
-  background-color: #000000;
+  background-color: #ffffff;
   min-height: 20vw;
   padding: 75px 50px;
   display: flex;
@@ -242,19 +245,19 @@ header {
   align-items: center;
 }
 header h1 {
-  color: #ffffff;
+  color: #000000;
   font-size: 2.3em;
 }
 header p {
   font-weight: 500;
-  color: #ffffff;
+  color: #000000;
   font-size: 1.2em;
 }
 header button {
   font-size: x-large;
   font-weight: 600;
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
   border: none;
   width: auto;
   height: 45px;
@@ -325,8 +328,8 @@ main div {
 .options button {
   font-size: x-large;
   font-weight: 600;
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
   border: none;
   width: auto;
   height: 45px;
