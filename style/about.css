@@ -1,0 +1,164 @@
+.title {
+  width: 80%;
+  margin: 200px auto;
+  text-align: center;
+}
+.title h1 {
+  font-size: 60px;
+}
+.title svg {
+  fill: white;
+  width: 70px;
+  height: auto;
+  padding-bottom: 15px;
+  animation: heya 4s infinite linear;
+}
+.title p {
+  line-height: 39px;
+  font-size: 30px;
+}
+
+@keyframes heya {
+  0% {
+    transform: rotate(-9deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-9deg);
+  }
+}
+@media screen and (max-width: 1400px) {
+  .title {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 900px) {
+  .title {
+    text-align: center;
+    width: 95%;
+    margin: 100px auto;
+  }
+  .title h1 {
+    font-size: 40px;
+  }
+  .title svg {
+    width: 40px;
+  }
+  .title p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+.what-we-do {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.what-we-do-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.what-we-do-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 50%;
+}
+.what-we-do-box div {
+  width: 50%;
+  min-width: 300px;
+  margin-top: 50px;
+}
+.what-we-do-box div p {
+  font-size: 26px;
+}
+
+@media screen and (max-width: 800px) {
+  .what-we-do-container {
+    flex-wrap: wrap;
+  }
+  .what-we-do-box {
+    width: 100%;
+  }
+  .what-we-do-box div {
+    width: 100%;
+  }
+  .what-we-do h1 {
+    font-size: 36px;
+  }
+}
+.the-team {
+  width: 80%;
+  margin: auto;
+}
+
+.rest-of-the-team p {
+  font-size: 26px;
+}
+
+.carousel {
+  width: 80%;
+  margin: 100px auto 0 auto;
+  display: flex;
+}
+
+.carousel-inner {
+  width: 60%;
+  height: 400px;
+}
+
+.carousel-item p {
+  font-size: 22px;
+}
+
+.button-holder-holder {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-holder {
+  position: relative;
+  width: 60%;
+}
+
+@media screen and (max-width: 1080px) {
+  .carousel {
+    flex-direction: column;
+  }
+  .carousel-inner {
+    width: 100%;
+    height: 300px;
+  }
+  .button-holder-holder {
+    width: 100%;
+  }
+  .button-holder {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .carousel-inner {
+    height: 415px;
+  }
+  .carousel, .the-team, .title, .what-we-do {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .carousel-inner {
+    height: 500px;
+  }
+}
+.carousel-control-next, .carousel-control-prev, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+  opacity: 1;
+}/*# sourceMappingURL=about.css.map */

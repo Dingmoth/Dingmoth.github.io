@@ -1,0 +1,40 @@
+*
+    box-sizing: border-box
+
+.greeting-icon
+    margin-top: 100px
+
+
+.customer-list
+    margin: 100px auto 0 auto
+    width: 80%
+
+
+.customer
+    display: flex
+    align-items: center
+    margin: 20px 0
+    img
+        width: 400px
+        margin-right: 15px
+    p
+        font-size: 30px
+
+@media screen and (max-width: 1000px)
+    .customer-list
+        width: 95%
+    .customer
+        img
+            width: 200px
+        p
+            font-size: 26px
+
+@media screen and (max-width: 600px)
+    .customer
+        flex-direction: column
+        img
+            width: 250px
+            margin: 15px 0
+        p
+            font-size: 20px
+
